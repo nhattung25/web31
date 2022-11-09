@@ -22,31 +22,31 @@
       >
 
       <div style="float: right">
-        <a style="color: white; font-size: 120%" href="">KHÓA HỌC</a> &nbsp
+        <a style="color: white; font-size: 120%" href="">KHÓA HỌC</a> &nbsp;
         <a
           style="color: white; font-size: 120%"
           href="https://techmaster.vn/san-pham-hoc-vien?page=1"
           >SẢN PHẨM HỌC VIÊN</a
         >
-        &nbsp
+        &nbsp;
         <a
           style="color: white; font-size: 120%"
           href="https://techmaster.vn/trungtam/lich-khai-giang"
           >KHAI GIẢNG</a
         >
-        &nbsp
+        &nbsp;
         <a
           style="color: white; font-size: 120%"
           href="https://techmaster.vn/posts"
           >BLOG</a
         >
-        &nbsp
+        &nbsp;
         <a
           style="color: white; font-size: 120%"
           href="https://techmaster.vn/trai-nghiem"
           >TRẢI NGHIỆM</a
         >
-        &nbsp
+        &nbsp;
         <a
           style="color: white; font-size: 120%"
           href="https://job.techmaster.vn/viec-lam"
@@ -70,10 +70,10 @@
       </div>
     </div>
 
-    <!-- Thanh dẫn hương thưu mục -->
+    <!-- Thanh dẫn hương thư mục -->
     <div style="padding: 23px; color: black">
-      <a href="https://techmaster.vn/">Trang chủ</a>&nbsp >&nbsp
-      <a href="https://techmaster.vn/posts">Blog</a>&nbsp >&nbsp
+      <a href="https://techmaster.vn/">Trang chủ</a>&nbsp; >&nbsp;
+      <a href="https://techmaster.vn/posts">Blog</a>&nbsp; >&nbsp;
       <a href="http://127.0.0.1:5500/index.html"
         >Phân tích nghiệp vụ: Action - Event - Status</a
       >
@@ -123,18 +123,16 @@
       <h2>Action là động từ, Event là danh từ, còn Status là tính từ</h2>
 
       <p>
-        Action: Khách hàng đặt hàng - customer orders an item <br />
-        Event: Bản ghi đơn hàng được tạo ra - order record is created <br />
-        Status: Trạng thái của đơn hàng là "được tạo" - order status is
-        "created"
-        <br />
-        Khi chúng ta lấy yêu cầu từ khách hàng, tạo user story thì khách hàng
-        thường mô tả: Ai đó làm gì? Ví dụ:
+        Action: Khách hàng đặt hàng - customer orders an item Event: Bản ghi đơn
+        hàng được tạo ra - order record is created Status: Trạng thái của đơn
+        hàng là "được tạo" - order status is "created" Khi chúng ta lấy yêu cầu
+        từ khách hàng, tạo user story thì khách hàng thường mô tả: Ai đó làm gì?
+        Ví dụ:
       </p>
 
       <hr
         style="float: left"
-        width="2px"   
+        width="2px"
         size="50px"
         color="gray"
         align="left"
@@ -168,13 +166,13 @@
 
       <ol>
         <li>Event: Đơn hàng được tạo ra ~ order is created.</li>
-        <br />
+
         <li>
           Action: Hệ thống kho kiểm tra số lượng hàng tồn kho - inventory check
           item availability. Hoặc với shop nhỏ, chỉ cần truy vấn số lượng hàng
           có sẵn.
         </li>
-        <br />
+
         <li>
           Nếu mặt hàng ở trạng thái hết hàng (status out of stock) --> action:
           hệ thống tự động đặt mua bổ xung hàng hoặc trả về thông báo hết hàng
@@ -243,13 +241,10 @@
       <ul>
         <li>
           Hãy tạo bảng lưu sự kiện:
-          <pan style="color: brown"
-            >order_event, member_event, inventory_event</pan
-          >
-
+          <p style="color: brown">order_event, member_event, inventory_event</p>
           <br />
         </li>
-        <br />
+
         <li>
           Tạo bảng lưu giá trị theo thời gian ví dụ lịch sử giá mặt hàng. Mỗi
           dòng trong đơn hàng, tham chiếu đến giá tại thời điểm đặt hàng. Thay
@@ -263,10 +258,7 @@
         kết quả của sự kiện đó. Vậy các bạn cần liệt kê các trạng thái có thể
         xảy ra.
       </p>
-      <img
-        src="/images/Screenshot 2022-11-06 223726.png"
-        alt="Không thể hiển thị"
-      />
+      <img src="/images/1.png" alt="Không thể hiển thị" />
 
       <p>Liệt kê các sự kiện (event) một lớp học ở Techmaster:</p>
 
@@ -309,22 +301,28 @@
 
       <ol>
         <li style="padding: 5px">
-          <pan style="color: brown">scheduled</pan>: lập lịch để khai giảng
+          <p style="color: brown">scheduled</p>
+          : lập lịch để khai giảng
         </li>
         <li style="padding: 5px">
-          <pan style="color: brown">active</pan>: đang học
+          <p style="color: brown">active</p>
+          : đang học
         </li>
         <li style="padding: 5px">
-          <pan style="color: brown">canceled</pan>: huỷ khi chưa diễn ra
+          <p style="color: brown">canceled</p>
+          : huỷ khi chưa diễn ra
         </li>
         <li style="padding: 5px">
-          <pan style="color: brown">aborted</pan>: dừng giữa chừng
+          <p style="color: brown">aborted</p>
+          : dừng giữa chừng
         </li>
         <li style="padding: 5px">
-          <pan style="color: brown">merged</pan>: bị ghép chuyển sang lớp khác
+          <p style="color: brown">merged</p>
+          : bị ghép chuyển sang lớp khác
         </li>
         <li style="padding: 5px">
-          <pan style="color: brown">completed</pan>: hoàn tất
+          <p style="color: brown">completed</p>
+          : hoàn tất
         </li>
       </ol>
 
@@ -363,17 +361,21 @@
           Vẽ lược đồ chuyển đổi trạng thái để hình dung và lập trình đúng.
         </li>
         <li style="padding: 5px">
-          Đừng lưu trường <pan style="color: brown">created_date</pan> và
-          <pan style="color: brown">modified_date</pan> cùng một bảng. Hay tạo
-          bảng lưu sự kiện chỉ với
-          <pan style="color: brown">created_date</pan> và không sửa đổi nó. Xem
-          mục 2.
+          Đừng lưu trường
+          <p style="color: brown">created_date</p>
+          và
+          <p style="color: brown">modified_date</p>
+          cùng một bảng. Hay tạo bảng lưu sự kiện chỉ với
+          <p style="color: brown">created_date</p>
+          và không sửa đổi nó. Xem mục 2.
         </li>
         <li style="padding: 5px">
-          Nếu <pan style="color: brown">event_id</pan> của một sự kiện sẽ broad
-          cast sang nhiều microservice khác nhau hãy dùng global unique id nhưng
-          sắp xếp được theo thời gian. Còn nếu event_id chỉ là sự kiện trong một
-          hệ thống nhỏ monolithic, single database, bạn có thẻ
+          Nếu
+          <p style="color: brown">event_id</p>
+          của một sự kiện sẽ broad cast sang nhiều microservice khác nhau hãy
+          dùng global unique id nhưng sắp xếp được theo thời gian. Còn nếu
+          event_id chỉ là sự kiện trong một hệ thống nhỏ monolithic, single
+          database, bạn có thẻ
         </li>
       </ol>
       <h1>Bình luận</h1>
@@ -390,9 +392,9 @@
         alt="Không thể hiển thị"
       />
       <a href="https://techmaster.vn/author/36/trinh-minh-cuong" target="_blank"
-        ><pan style="color: black; font-size: 120%; padding-right: 50px"
-          ><b>Trịnh Minh Cường</b></pan
-        ></a
+        ><p style="color: black; font-size: 120%; padding-right: 50px">
+          <b>Trịnh Minh Cường</b>
+        </p></a
       >
       <p>317 bài viết</p>
 

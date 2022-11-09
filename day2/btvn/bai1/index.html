@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th colspan="2">ĐĂNG KÝ</th>
+      </tr>
+      <tr>
+        <td>Full name</td>
+        <td>
+          <form action="#" method="post" name="nhap">
+            <input type="text" name="full name=" />
+          </form>
+        </td>
+      </tr>
+
+      <tr>
+        <td>User name</td>
+        <td>
+          <form action="#" method="post" name="nhapthongtin">
+            <input type="text" name="fullname=" />
+          </form>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Password</td>
+        <td>
+          <form action="#" method="post" name="nhap">
+            <input type="password" name="password" />
+          </form>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Nhập lại password</td>
+        <td>
+          <form action="#" method="post" name="nhap">
+            <input type="password" name="password" />
+          </form>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Giới tính</td>
+        <td>
+          <form>
+            <input type="radio" id="html" name="gioitinh" value="nam" />  
+            <label for="nam">Nam</label>
+            <input type="radio" id="html" name="gioitinh" value="nu" />  
+            <label for="nu">Nữ</label>
+          </form>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Ngày sinh</td>
+        <td>
+          <form action="#" method="post" name="ngay">
+            <input type="date" name="ngay" />
+          </form>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Địa chỉ</td>
+        <td>
+          <form action="#" method="post" name="diachi">
+            <textarea name="diachi" id="" cols="20" rows="3"></textarea>
+          </form>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Avatar</td>
+        <td>
+          <form action="#" method="post" name="diachi">
+            <form action="/action_page.php">
+              <input type="file" id="myfile" name="myfile" /><br /><br />
+            </form>
+          </form>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Sở thích</td>
+        <td>
+          <form>
+            <input type="checkbox" id="sothich1" name="sothich1" value="phim" />
+            <label for="sothich1"> Xem phim</label>
+            <input
+              type="checkbox"
+              id="sothich2"
+              name="sothich2"
+              value="thethao"
+            />
+            <label for="sothich2"> Thể thao</label>
+            <input type="checkbox" id="sothich3" name="sothich3" value="web" />
+            <label for="sothich3"> Web</label>
+          </form>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <form action="/action_page.php">
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Ok" />
+          </form>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
