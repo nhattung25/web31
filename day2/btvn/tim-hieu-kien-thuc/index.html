@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>BTVN buổi 2: Tìm hiểu kiên thức</h1>
+    <div>
+      <h3>1. Quy tắc đặt tên theo chuẩn BEM</h3>
+      <p>
+        BEM là tên viết tắt của: Block, Element, Modifier, là một phương pháp
+        giúp bạn tạo ra các components có thể tái sử dụng và chia sẻ code trong
+        phát triển front-end. <br />
+        Tên class BEM bao gồm 3 thành phần: block, element và modifier (có thể
+        hiểu là: khối, phần tử và sửa đổi). Trong bài này, tên các thành phần
+        của BEM sẽ được giữ nguyên tên theo tiếng Anh cho dễ hình dung. <br />
+        Nếu cả ba được dùng chung thì tên class BEM sẽ như thế này:
+        block__element--modifier
+      </p>
+      <table>
+        <tr>
+          <th>Thành phần</th>
+          <th>Block (Khối)</th>
+          <th>Element (Phần tử)</th>
+          <th>Modifier (Sửa đổi)</th>
+        </tr>
+        <tr>
+          <th>Định nghĩa</th>
+          <td>
+            Là thực thể độc lập có ý nghĩa riêng. Tuy các block có thể được lồng
+            vào nhau và tương tác với nhau, nhưng về mặt ngữ nghĩa các block vẫn
+            bình đẳng, không có sự ưu tiên hoặc thứ bậc.
+          </td>
+          <td>
+            Là một phần của block và không có ý nghĩa độc lập, hay có thể coi
+            element là phần tử con của block, element được gắn về mặt ngữ nghĩa
+            với block của nó.
+          </td>
+          <td>
+            Là sửa đổi trên một block hoặc element, được dùng để thay đổi vẻ
+            ngoài, hành vi hoặc trạng thái của block hay element đó.
+          </td>
+        </tr>
+        <tr>
+          <th>Ví dụ</th>
+          <td style="color: brown">header, container, menu, checkbox, input</td>
+          <td style="color: brown">
+            menu item, list item, checkbox caption, header title
+          </td>
+          <td style="color: brown">
+            disabled, highlighted, checked, fixed, size big, color yellow
+          </td>
+        </tr>
+      </table>
+      <h4>Quy tắc đặt tên</h4>
+      <h3>BLOCK</h3>
+      <ul>
+        <li>
+          Tên block có thể bao gồm các chữ cái Latinh, chữ số và dấu gạch ngang.
+        </li>
+        <li>Tạo CSS class: thêm một tiền tố vào phía trước. VD: .block</li>
+      </ul>
+      <h3>ELEMENT</h3>
+      <ul>
+        <li>
+          Tên element có thể bao gồm các chữ cái Latinh, chữ số, dấu gạch ngang
+          và dấu gạch dưới.
+        </li>
+        <li>
+          Tạo class CSS: tên block cộng với hai dấu gạch dưới, cộng với tên
+          element. VD: .block__elem
+        </li>
+      </ul>
+      <h3>MODIFIER</h3>
+      <ul>
+        <li>
+          Tên của modifier có thể bao gồm các chữ cái Latinh, chữ số, dấu gạch
+          ngang và dấu gạch dưới.
+        </li>
+        <li>
+          Tạo class CSS: tên block hoặc element cộng với hai dấu gạch ngang,
+          cộng với tên modifier.
+        </li>
+        <li>
+          Dấu cách trong các modifier dài (chứa 2 tiếng trở lên) được thay thế
+          bằng dấu gạch ngang.
+        </li>
+        <li>VD: .block--mod { }</li>
+      </ul>
+    </div>
+    <div>
+      <h3>2.Box model là gì? Các thuộc tính cơ bản của box model</h3>
+      <h4>Box model là gì</h4>
+      <p>
+        Box Model là một kỹ thuật cơ bản nhất trong CSS Layout và được sử dụng
+        để bạn mô tả về khoảng cách mà mỗi phần tử trên website được sở hữu, hay
+        nói cách khác là kỹ thuật tinh chỉnh khoảng cách hiển thị cho mỗi phần
+        tử trên website.
+      </p>
+      <h4>Các thuộc tính cơ bản của box model</h4>
+      <ul>
+        <li><b>Margin:</b> Khoảng cách tính từ bên ngoài của phần tử.</li>
+        <li><b>Border:</b> Đường viền của phần tử.</li>
+        <li><b>Padding: </b>Khoảng cách tính từ bên trong của phần tử.</li>
+        <li><b>Content:</b> Nội dung trong phần tử.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>
+        3. Ba quy tắc chi phối cách thuộc tính CSS áp dụng cho phần tử: Cascade
+        - Specificity - Inheritance là gì?
+      </h3>
+      <h4>Cascade</h4>
+      <ul>
+        <li>
+          <b>Importance:</b> mức độ ưu tiên. được sử dụng để thay đổi thứ tự ưu
+          tiên của CSS, khi một quy luật nào đó được gán lệnh Important thì đồng
+          nghĩa với việc nó sẽ có mức ưu tiên cao nhất, cho dù thành phần đó có
+          khai báo CSS cục bộ hay CSS nội tuyến.
+        </li>
+        <li>
+          <b>Specificity: </b>Tính đặc hiệu (hay độ ưu tiên) là cách mà trình
+          duyệt quyết định sẽ áp dụng thuộc tính css nào với một phần tử khi có
+          nhiều quy tắc css cùng trỏ đến phần tử đó. Tính đặc hiệu dựa trên các
+          quy tắc phù hợp bao gồm các loại selector (bộ chọn) CSS khác nhau.
+        </li>
+        <li><b>Source Order: </b></li>
+      </ul>
+    </div>
+  </body>
+</html>
