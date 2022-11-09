@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <style>
-    table,
-    th,
-    td {
-      border: 1px solid black;
-    }
-  </style>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
   </head>
+
   <body>
     <table>
       <tr>
@@ -58,9 +59,9 @@
         <td>Giới tính</td>
         <td>
           <form>
-            <input type="radio" id="html" name="gioitinh" value="nam" />  
+            <input type="radio" id="nam" name="gioitinh" value="nam" />  
             <label for="nam">Nam</label>
-            <input type="radio" id="html" name="gioitinh" value="nu" />  
+            <input type="radio" id="nu" name="gioitinh" value="nu" />  
             <label for="nu">Nữ</label>
           </form>
         </td>
@@ -79,7 +80,7 @@
         <td>Địa chỉ</td>
         <td>
           <form action="#" method="post" name="diachi">
-            <textarea name="diachi" id="" cols="20" rows="3"></textarea>
+            <textarea name="diachi" id="diachi" cols="20" rows="3"></textarea>
           </form>
         </td>
       </tr>
@@ -88,9 +89,7 @@
         <td>Avatar</td>
         <td>
           <form action="#" method="post" name="diachi">
-            <form action="/action_page.php">
-              <input type="file" id="myfile" name="myfile" /><br /><br />
-            </form>
+            <input type="file" id="myfile" name="myfile" />
           </form>
         </td>
       </tr>
