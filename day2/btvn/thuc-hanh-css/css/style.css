@@ -1,14 +1,18 @@
 .heading {
-    font-family: Arial;
+  font-family: Arial;
   color: black;
   text-align: left;
-  width: 280%; float: left
+  width: 280%;
+  float: left;
+}
+.background {
+  background-color: rgb(222, 224, 224);
+  height: 5000px;
 }
 
 .container {
   color: white;
   width: 100%;
-  float: right;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -17,46 +21,120 @@
   line-height: 2;
   text-decoration: none;
 }
+
+.content {
+  font-family: Arial;
+  background: white !important;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .linktech {
   float: left;
   padding-left: 20px;
   color: white;
   text-decoration: none;
 }
-.folder{
-    font-family: Arial;
-    padding: 23px; color: black"
+
+.link {
+  float: right;
+  padding-left: 20px;
+  color: white;
+  text-decoration: none;
 }
-.leftblock{
-width: 66%; padding-left: 40px; float: left;
+
+.link2 {
+  float: left;
+  color: black;
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+.linktmc {
+  text-align: center;
+  width: 120px;
+  color: black;
+  text-decoration: none;
+}
+
+.folder {
+  color: black;
+  padding-top: 50px;
+  font-family: Arial;
+  padding: 10px;
+  text-decoration: none;
+}
+.leftblock {
+  width: 66%;
+  padding-left: 40px;
+  float: left;
 }
 
 /* Đường kẻ ngang */
-.horline{
-    width:100%; size:1px; color:gray; float: left;
+.horline {
+  width: 100%;
+  size: 1px;
+  color: gray;
+  float: left;
 }
 
 /* Đường kẻ dọc */
-.verline1{
-    float: left;
-    width:3px;
-    background-color: gray;
-    height: 89px;
+.verline1 {
+  float: left;
+  width: 3px;
+  background-color: gray;
+  height: 89px;
 }
 
-.verline2{
-    float: left;
-    width:3px;
-    background-color: gray;
-    height: 60px;
+.verline2 {
+  float: left;
+  width: 3px;
+  background-color: gray;
+  height: 60px;
 }
-.verline3{
-    float: left;
-    width:3px;
-    background-color: gray;
-    height: 120px;
+.verline3 {
+  float: left;
+  width: 3px;
+  background-color: gray;
+  height: 100px;
 }
 
-.para{
-    color: brown;
+.para {
+  color: brown;
+}
+
+.liststyle {
+  font-family: Arial;
+  padding-left: 40px;
+  line-height: 2.5;
+}
+
+/* Nút Dropdown*/
+.dropdown_button {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+/* Thiết lập vị trí cho thẻ div với class dropdown*/
+.dropdown {
+  position: relative;
+  display: inherit;
+}
+/* Nội dung Dropdown */
+.dropdown_content {
+  /*Ẩn nội dung các đường dẫn*/
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* Thiết kế style cho các đường dẫn trong Dropdown */
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
