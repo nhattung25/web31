@@ -230,7 +230,9 @@
           <ul class="liststyle">
             <li>
               Hãy tạo bảng lưu sự kiện:
-              <pan class="para">order_event, member_event, inventory_event</pan>
+              <span class="para"
+                >order_event, member_event, inventory_event</span
+              >
             </li>
 
             <li>
@@ -288,14 +290,14 @@
           <p>Liệt kê các trạng thái (status) một lớp học:</p>
 
           <ol class="liststyle">
-            <li><pan class="para">scheduled</pan>: lập lịch để khai giảng</li>
-            <li><pan class="para">active</pan>: đang học</li>
-            <li><pan class="para">canceled</pan>: huỷ khi chưa diễn ra</li>
-            <li><pan class="para">aborted</pan> : dừng giữa chừng</li>
+            <li><span class="para">scheduled</span>: lập lịch để khai giảng</li>
+            <li><span class="para">active</span>: đang học</li>
+            <li><span class="para">canceled</span>: huỷ khi chưa diễn ra</li>
+            <li><span class="para">aborted</span> : dừng giữa chừng</li>
             <li>
-              <pan class="para">merged</pan> : bị ghép chuyển sang lớp khác
+              <span class="para">merged</span> : bị ghép chuyển sang lớp khác
             </li>
-            <li><pan class="para">completed</pan> : hoàn tất</li>
+            <li><span class="para">completed</span> : hoàn tất</li>
           </ol>
 
           <p>
@@ -306,13 +308,13 @@
           <ul class="liststyle">
             <li>
               Ví dụ 1: thêm sinh viên vào lớp, không chuyển lớp từ
-              <pan class="para">scheduled</pan> sang
-              <pan class="para">active</pan>.
+              <span class="para">scheduled</span> sang
+              <span class="para">active</span>.
             </li>
             <li>
               Ví dụ 2: file được tạo ra trong ổ cứng (file is created) là sự
               kiện tác động lên ổ cứng. Ổ cứng chuyển sang trạng thái đầy
-              <pan class="para"> disk full </pan> sau khi rất nhiều file kích
+              <span class="para"> disk full </span> sau khi rất nhiều file kích
               thước khủng tạo ra.
             </li>
           </ul>
@@ -336,15 +338,16 @@
               Vẽ lược đồ chuyển đổi trạng thái để hình dung và lập trình đúng.
             </li>
             <li>
-              Đừng lưu trường <pan class="para">created_date</pan> và
-              <pan class="para">modified_date</pan> cùng một bảng. Hãy tạo bảng
-              lưu sự kiện chỉ với created_date và không sửa đổi nó. Xem mục 2.
+              Đừng lưu trường <span class="para">created_date</span> và
+              <span class="para">modified_date</span> cùng một bảng. Hãy tạo
+              bảng lưu sự kiện chỉ với created_date và không sửa đổi nó. Xem mục
+              2.
             </li>
             <li>
               Nếu của một sự kiện sẽ broad cast sang nhiều microservice khác
               nhau hãy dùng global unique id nhưng sắp xếp được theo thời gian.
-              Còn nếu <pan class="para">event_id</pan> chỉ là sự kiện trong một
-              hệ thống nhỏ monolithic, single database, bạn có thẻ
+              Còn nếu <span class="para">event_id</span> chỉ là sự kiện trong
+              một hệ thống nhỏ monolithic, single database, bạn có thẻ
             </li>
           </ol>
           <h1>Bình luận</h1>
