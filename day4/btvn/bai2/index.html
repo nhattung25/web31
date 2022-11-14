@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu kiến thức</title>
+  </head>
+  <body style="width: 900px; padding-left: 20px">
+    <h1>Tìm hiểu kiến thức về CSS position</h1>
+    <h2>1. Position trong css là gì</h2>
+    <p>
+      <b>Position </b>trong CSS được sử dụng với mục đích định vị vị trí hiển
+      thị của các phần tử thẻ HTML và thường dùng trong việc xây dựng CSS cho
+      menu nhiều cấp, tooltip và một số chức năng khác có liên quan đến vị trí.
+    </p>
+    <img
+      src="/btvn/bai2/images/minhhoa.png"
+      alt="minhhoa"
+      style="width: 700px"
+    />
+    <h2>2. Các position trong css</h2>
+    <ul>
+      Thuộc tính Position trong CSS có năm loại:
+    </ul>
+    <li>
+      <b>static</b>: Giá trị hiển thị Position trong css một cách mặc định
+      (default), các thành phần sẽ nằm theo thứ tự của văn bản.
+    </li>
+    <li>
+      <b>relative</b>: Định vị trí tuyệt đối cho các thành phần, không gây ảnh
+      hưởng tới vị trí ban đầu hay các thành phần khác.
+    </li>
+    <li>
+      <b>fixed</b>: Định vị và giúp cho phần tử luôn cố định một chỗ, ví dụ như
+      khi bạn scroll trình duyệt chẳng hạn, phần tử sẽ không thay đổi.
+    </li>
+    <li>
+      <b>absolute</b>: Giá trị này sẽ giúp định vị trí tuyệt đối cho thành phần
+      theo thành phần bao ngoài, hoặc ít nhất là theo cửa sổ trình duyệt. Fixed:
+      Định vị trí tương đối cho thành phần theo cửa sổ trình duyệt.
+    </li>
+    <li>
+      <b>sticky</b>: Vị trí của phần tử sẽ được định vị khi người dùng sử dụng
+      thanh cuộn.
+    </li>
+    <h2>3. Giải thích chi tiết và ví dụ minh họa</h2>
+
+    <h3>1. Position static</h3>
+    <p>
+      Position static hay vị trí mặc định, đồng nghĩa với việc vị trí của phần
+      tử này được xác định theo quy tắc thông thường của các tài liệu. Ta sẽ
+      không thể sử dụng các thuộc tính CSS như: Top, Bottom, Left, Right để
+      thiết lập vị trí cho phần tử đó. Ví dụ minh họa như bên dưới. Trong đó
+      class "vidu2" để position <b>static</b>.
+    </p>
+    <img
+      src="/btvn/bai2/images/static-css.png"
+      alt="minh họa"
+      style="padding-right: 50px"
+    />
+    <img src="/btvn/bai2/images/static-html.png" alt="minhhoa" />
+
+    <p><b>Kết quả</b>:</p>
+    <img src="/btvn/bai2/images/static.png" alt="minhhoa" />
+
+    <h3>2. Position relative</h3>
+    <p>
+      Phần tử được định vị bằng Position relative sẽ nằm ở vị trí tương đối so
+      với vị trí static. Ta có thể sử dụng các CSS như: Top, Bottom, Left, Right
+      để định vị vị trí của phần tử đó. Ví dụ minh họa như bên dưới. Trong đó
+      class "vidu2" để position <b>relative</b>.
+    </p>
+    <img
+      src="/btvn/bai2/images/relative-css.png"
+      alt="minh họa"
+      style="padding-right: 50px"
+    />
+
+    <p><b>Kết quả</b>:</p>
+    <img src="/btvn/bai2/images/relative.png" alt="minhhoa" />
+
+    <h3>3. Position fixed</h3>
+    <p>
+      Phần tử được định vị bằng Position fixed sẽ có vị trí tương đối so với
+      Viewport trên trình duyệt. Ví dụ minh họa như bên dưới. Trong đó class
+      "vidu2" để position <b>fixed</b>.
+    </p>
+    <img
+      src="/btvn/bai2/images/fixed-css.png"
+      alt="minh họa"
+      style="padding-right: 50px"
+    />
+
+    <p>
+      <b>Kết quả</b>: Khung chữ "fixed" sẽ đứng cố định tại vị trí cách
+      top:100px và left:15px của màn hình làm việc khi cuộn con lăn chuột.
+    </p>
+    <img src="/btvn/bai2/images/fixed.png" alt="minhhoa" />
+
+    <h3>4. Position absolute</h3>
+    <p>
+      Đối với một phần tử được định vị bằng Position absolute, phần tử sẽ tự
+      động ưu tiên cho phần tử cha, ông gần nhất của chúng có chứa Position
+      relative. Khi tìm thấy phần tử chứa Position relative, phần tử được định
+      vị bằng Position absolute sẽ tự động tạo vị trí tương đối so với phần tử
+      đó. Nếu không, phần tử định vị bằng Position absolute sẽ lấy vị trí tương
+      đối so với Viewport trên trình duyệt của bạn. Trong đó class "vidu2" để
+      position <b>absolute</b>.
+    </p>
+    <img
+      src="/btvn/bai2/images/absolute-css.png"
+      alt="minh họa"
+      style="padding-right: 50px"
+    />
+
+    <p>
+      <b>Kết quả</b>: Khung chữ "fixed" sẽ không đứng cố định tại màn hình làm
+      việc khi cuộn trang.
+    </p>
+    <img src="/btvn/bai2/images/absolute.png" alt="minhhoa" />
+
+    <h3>5. Position sticky</h3>
+    <p>
+      Phần tử sẽ linh động chuyển đổi giữa hai trạng thái relative và fixed để
+      thay đổi vị trí dựa trên thao tác cuộn của người dùng.. Trong đó class
+      "vidu2" để position <b>sticky</b>.
+    </p>
+
+    <p>
+      <b>Kết quả</b>
+    </p>
+    <img src="/btvn/bai2/images/sticky1.png" alt="minhhoa" />
+    <img src="/btvn/bai2/images/sticky2.png" alt="minhhoa" />
+  </body>
+</html>
