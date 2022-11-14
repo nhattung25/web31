@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="width: 1000px; padding-left: 50px" ;>
+    <h1>Tìm hiểu kiến thức về flex box</h1>
+    <h2>Flex box là gì</h2>
+    <p>
+      Flexbox là một kiểu dàn trang (layout mode) mà nó sẽ tự cân đối kích thước
+      của các phần tử bên trong để hiển thị trên mọi thiết bị. Nói theo cách
+      khác, bạn không cần thiết lập kích thước của phần tử, không cần cho nó
+      float, chỉ cần thiết lập nó hiển thị chiều ngang hay chiều dọc, lúc đó các
+      phần tử bên trong có thể hiển thị theo ý muốn.
+    </p>
+
+    <p>
+      Hiện nay, theo lời khuyên từ Mozilla thì chúng ta sử dụng Flexbox để thiết
+      lập bố cục trong phạm vi nhỏ (ví dụ như những khung trong website) và khi
+      thiết lập bố cục ở phạm vi lớn hơn (như chia cột website) thì vẫn nên sử
+      dụng kiểu thông thường là dàn trang theo dạng lưới (grid layout).
+    </p>
+    <h2>Thuật ngữ các thành phần trong Flexbox.</h2>
+    <h3>Cấu trúc Flex box</h3>
+    <img src="/day3/btvn/bai2/images/1.webp" alt="cautruc" />
+    <p>
+      Hai thành phần quan trọng nhất trong một bố cục Flexbox là
+      <b>container</b> và <b>item</b>.
+    </p>
+    <h3>Các thuật ngữ</h3>
+    <ul>
+      <li>
+        <b>Container</b>: là thành phần lớn bao quanh các phần tử bên trong, bạn
+        sẽ thiết lập kiểu hiển thị inline (sắp xếp theo chiều ngang) hoặc kiểu
+        sắp xếp theo chiều dọc. Khi đó, các item bên trong sẽ hiển thị dựa trên
+        thiết lập của container này.
+      </li>
+      <li>
+        <b>Item</b>: Các phần tử con của container được gọi là item, ở item bạn
+        có thể thiết lập nó sẽ sử dụng bao nhiêu cột trong một container, hoặc
+        thiết lập thứ tự hiển thị của nó.
+      </li>
+      <li>
+        <b>Main start, main end</b>: Khi thiết lập flexbox, điểm bắt đầu của
+        container gọi là main start và điểm kết thúc được gọi là main end. Điều
+        này có nghĩa, các item bên trong sẽ heienr thị từ main start đến main
+        end (hoặc là được phép hiển thị đến main end). Và chiều vuông góc của nó
+        là cross start, cross end cũng có ý nghĩa tương tự nhưng luôn vuông góc
+        với main start, main end.
+      </li>
+      <li>
+        <b>Main axis</b>: Trục này là trục chính để điều khiển hướng mà các item
+        sẽ hiển thị. Như bạn thấy ở trên hình main axis là trục dọc nên các item
+        sẽ hiển thị theo chiều dọc, tuy nhiên ta có thể sử dụng thuộc tính
+        flex-direction để thay đổi trục của main axis và lúc đó các item sẽ hiển
+        thị theo nó. Và cross axis luôn là trục vuông góc của main axis.
+      </li>
+      <li>
+        <b>Main size</b>: Bạn có thể hiểu đơn giản là kích thước (chiều rộng
+        hoặc dọc) của mỗi item dựa theo trục main axis.
+      </li>
+      <b>Cross size</b
+      >: Là kích thước (chiều rộng hoặc dọc) của mỗi item dựa theo trục cross
+      axis.
+    </ul>
+    <h3>Các thuộc tính</h3>
+    <ol>
+      <li>
+        <b>display</b>: Để sử dụng flex trong css thì đơn giản là chúng ta chỉ
+        cần khai báo thuộc tính display: flex. Các cột CSS thông thường không sử
+        dụng được trong flex container.
+      </li>
+      <li>
+        <b>flex-direction</b>:Thuộc tính flex-direction xác định hướng của
+        main-axis để container sắp xếp các item. Gồm các tham số:
+        <b>row, row-reverse, column và column-reverse</b>
+      </li>
+      <li>
+        <b>flex-wrap</b>: thuộc tính flex-wrap cho phép item tự động xuống dòng
+        khi kích thước container thay đổi. Gồm các tham số:
+        <b>nowrap, wrap và wrap-reverse</b>
+      </li>
+      <li>
+        <b>flex-flow</b>: Thuộc tính flex-flow sử dụng để gộp chung hai thuộc
+        tính flex-direction và flex-wrap.
+      </li>
+      <li>
+        <b>justify-content</b>: thuộc tính justify-content để điều chỉnh vị trí
+        bắt đầu và căn chỉnh các item bên trong container theo dọc theo trục
+        main axis, chiều ngang hoặc chiều dọc tùy thuộc vào flex-direction.
+      </li>
+      <li>
+        <b>align-items</b>: Thuộc tính align-items sử dụng để điều chỉnh vị trí
+        bắt đầu và căn chỉnh các item bên trong container theo dọc theo trục
+        cross axis, chiều ngang hoặc chiều dọc tùy thuộc vào flex-direction.
+      </li>
+      <li>
+        <b>align-content</b>: Thuộc tính align-content sử dụng để căn chỉnh
+        khoảng cách các item bên trong container theo dọc theo trục cross axis,
+        chiều ngang hoặc chiều dọc tùy thuộc vào flex-direction.
+      </li>
+      <li>
+        <b>order</b>: Thuộc tính order sử dụng để sắp xếp lại vị trí sắp xếp của
+        các item.
+      </li>
+      <li>
+        <b>flex-grow</b>: Thuộc tính flex-grow cho phép các phần tử giãn theo độ
+        rộng của container.
+      </li>
+      <li>
+        <b>flex-shrink</b>: Thuộc tính flex-shrink ngược lại với thuộc tính
+        flex-grow ở trên, nó không giãn ra mà lại co lại khi chúng ta thay đổi
+        độ rộng của container.
+      </li>
+      <li>
+        <b>flex-basis</b>: Thuộc tính flex-basis sử dụng để xác định độ dài ban
+        đầu của một item.
+      </li>
+      <li>
+        <b>flex</b>: Thuộc tính flex sử dụng để gộp chung ba thuộc tính
+        <b>flex-grow</b>, <b>flex-shrink</b> và <b>flex-basis</b>.
+      </li>
+      <li>
+        <b>align-self</b>: Thuộc tính align-self có tác dụng tương tự như
+        align-items của phần container nhưng sử dụng riêng cho từng item, bạn có
+        thể dùng nó để đặt lại vị trí cho một số item mà align-items đã quy
+        định.
+      </li>
+    </ol>
+  </body>
+</html>
