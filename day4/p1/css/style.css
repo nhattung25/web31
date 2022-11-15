@@ -1,14 +1,16 @@
 .flex-container {
-  /* Bởi vì flex box là module nên tự động đi kèm với tất cả các thuộc tính khác */
+  /* Bởi vì flex box là module (bắt buộc)nên tự động đi kèm với tất cả các thuộc tính khác */
   display: flex;
   /* Quy định chiều của trục main hay hướng sắp xếp các phần tử */
   flex-direction: row;
   /* Căn chỉnh các item theo trục main */
   justify-content: flex-start; /* Giá trị mặc định là flex-start*/
-  /* Căn chỉnh item theo trục cross */
+  /* Căn chỉnh item theo trục cross( căn chỉnh các mục trên dòng của nó */
   align-items: stretch;
   /* Cho phép xuống dòng khi vượt quá container */
   flex-wrap: wrap;
   /* Căn chỉnh dòng (line trong container) */
   align-content: stretch;
+  /* Đặt các khoảng cách giữa mỗi item */
+  gap: 20px;
 }
