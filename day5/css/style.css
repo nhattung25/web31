@@ -1,0 +1,67 @@
+/* Tip CSS cho hình ảnh, luôn dùng */
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+.box.relative {
+  background-color: aqua;
+  /* Mặc định tất cả các giá trị khác static sẽ nằm trên layer cao và đè lên static
+  Việc sử dụng relative thì không anh hưởng đến vijtris của các phần tử xung quanh
+  Chỉ áp dụng được 2/4 thuộc tính và thường theo 1 góc cụ thể
+  Thực tế relative không phải để dịch chuyển vị trí phần tử mà sử dụng để làm mốc căn chỉnh cho các phần từ con là absolute
+  Trường hợp dịch chuyển thì dùng translate để thay thế */
+  position: relative;
+}
+
+.box.static {
+  background-color: green;
+}
+
+.box.fixed {
+  background-color: yellow;
+}
+.box.absolute {
+  /* Khi sử dụng absolute thì các phần tử xung quanh sẽ bị ảnh hương 
+  Khi không nằm trong thẻ cha nào thì bất kỳ thẻ nào khác static sẽ căn theo khung nhìn (viewport) - khung trình duyệt
+  Absolute căn theo phần tử cha gần nhất có position khác static
+  Có thể áp dụng đồng thời cả 4 thuộc tính top left right bot, hữu ích trong trường hợp tạo lớp phủ
+  Chỉ áp dụng được khi không set kích thước*/
+  background-color: blueviolet;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+.box.absolute.overlay {
+  /* ban đầu ẩn đi */
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 127, 127, 0.61);
+}
+.box.relative:hover.box.absolute.overlay {
+  display: block;
+}
+
+.box.fixed {
+  /* Ảnh hưởng đến các phần tử xung quanh 
+    Luôn căn chỉnh theo khung trình duyệt
+    CÓ thể áp dụng top left right bot-dùng để tạo lớp phủ toàn màn hình, có tác dụng khi không set kích thước*/
+  background-color: blue;
+  top: 100px;
+  left: 100px;
+  position: fixed;
+}
+/* Sticky hoạt động đươc cần có 1 conatiner có chiều cao cụ thể hoặc vượt quá màn hình
+Cho phép 1 phân từ có viej trí linh hoạt trên trang */
+.box.sticky {
+  position: sticky;
+  background-color: brown;
+  top: 0px;
+  left: 0px;
+}
+
+
+
