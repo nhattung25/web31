@@ -3,20 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: azure;
-
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  color: #757575;
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
 }
-
 a {
   text-decoration: none;
   color: #757575;
@@ -25,29 +16,45 @@ a {
 ul {
   list-style-type: none;
 }
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: azure;
+  color: #757575;
+}
 
-.title {
-  margin-bottom: 20px;
+.page {
+  background-color: rgb(153, 6, 6);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  padding-left: 100px;
 }
 
 .menu {
   background-color: #fff;
-  position: relative;
+  left: 0;
+  width: 200px;
 }
 
 .menu-item {
+  background-color: #fff;
   width: 200px;
-  /* position: relative; */
+  position: relative;
+}
+
+.menu-item,
+.menu-item2 {
+  background-color: #fff;
+  width: 200px;
+  position: relative;
 }
 
 .menu-item p {
   padding-left: 8px;
   padding-right: 8px;
-  height: 27px;
-  line-height: 27px;
+  height: 30.88px;
   text-decoration: none;
   font-size: 13px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,13 +79,22 @@ ul {
   color: chocolate;
 }
 
-.sub-menu1,
-.sub-menu2 {
+.sub-menu1 {
+  background-color: #fff;
   width: 200px;
   position: absolute;
   top: 0;
   left: 200px;
+  display: none;
+  height: 100%;
+}
 
+.sub-menu2 {
+  background-color: #fff;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 200px;
   display: none;
   height: 100%;
 }
@@ -87,6 +103,6 @@ ul {
   display: block;
 }
 
-.sub-menu1:hover .sub-menu2 {
+.menu-item2:hover .sub-menu2 {
   display: block;
 }
