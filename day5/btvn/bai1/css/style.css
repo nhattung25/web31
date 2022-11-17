@@ -36,12 +36,6 @@ body {
   width: 200px;
 }
 
-.menu-item {
-  background-color: #fff;
-  width: 200px;
-  position: relative;
-}
-
 .menu-item,
 .menu-item2 {
   background-color: #fff;
@@ -49,7 +43,9 @@ body {
   position: relative;
 }
 
-.menu-item p {
+
+.menu-item p,
+.menu-item2 p {
   padding-left: 8px;
   padding-right: 8px;
   height: 30.88px;
@@ -83,26 +79,28 @@ body {
   background-color: #fff;
   width: 200px;
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 200px;
   display: none;
-  height: 100%;
+  
 }
 
 .sub-menu2 {
   background-color: #fff;
   width: 200px;
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 200px;
   display: none;
-  height: 100%;
+  
 }
 
 .menu-item:hover .sub-menu1 {
+  
   display: block;
 }
 
 .menu-item2:hover .sub-menu2 {
   display: block;
+
 }

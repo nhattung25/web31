@@ -1,0 +1,21 @@
+.form {
+  width: 370px;
+  background-color: aquamarine;
+  box-shadow: 1px;
+  border: 1px solid;
+  border-radius: 2px;
+}
+label {
+  display: block;
+}
+.form-dk {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 120px;
+  justify-content: center;
+}
+
+.form-field {
+ 
+  
+}
