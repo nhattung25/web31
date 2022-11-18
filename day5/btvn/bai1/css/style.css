@@ -81,6 +81,7 @@ body {
   top: 0px;
   left: 200px;
   display: none;
+  height: 370.56px;
 }
 
 .sub-menu2 {
@@ -90,6 +91,7 @@ body {
   top: 0px;
   left: 200px;
   display: none;
+  height: 370.56px;
 }
 
 .menu-item:hover .sub-menu1 {
