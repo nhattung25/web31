@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  box-sizing: border-box;
+  background-color: rgba(245, 238, 229, 0);
+}
+a {
+  text-decoration: none;
+  color: rgba(21, 21, 146, 0.822);
+}
+.register {
+  width: 430px;
+  margin: auto;
+  background-color: rgba(228, 214, 194, 0.678);
+}
+.container {
+  width: 400px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.main-title {
+  font-size: 34px;
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+
+.sub-title {
+  color: #1c1e21ce;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+.full-name {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.dob {
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+.gender {
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  color: black;
+}
+.tel {
+  padding-bottom: 10px;
+}
+.pass {
+  padding-bottom: 10px;
+}
+
+.info {
+  padding-top: 5px;
+  color: gray;
+}
+
+.term {
+  padding-bottom: 15px;
+  font-size: 10px;
+  color: gray;
+}
+.first-name > input[type="text"] {
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid rgba(4, 69, 167, 0.199);
+  border-radius: 4px;
+  width: 194px;
+  min-height: 38px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+button {
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: rgb(64, 173, 13);
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  width: 170px;
+  min-height: 32px;
+  text-align: center;
+}
+.last-name > input[type="text"] {
+  box-sizing: border-box;
+  border: 1px solid rgba(4, 69, 167, 0.199);
+  border-radius: 4px;
+  width: 194px;
+  padding-left: 10px;
+  min-height: 38px;
+  font-size: 14px;
+}
+
+.tel > input[type="text"] {
+  box-sizing: border-box;
+  border: 1px solid rgba(4, 69, 167, 0.199);
+  border-radius: 4px;
+  width: 400px;
+  padding-left: 10px;
+  min-height: 38px;
+  font-size: 14px;
+}
+
+.pass > input[type="password"] {
+  box-sizing: border-box;
+  border: 1px solid rgba(4, 69, 167, 0.199);
+  border-radius: 4px;
+  width: 400px;
+  padding-left: 10px;
+  min-height: 38px;
+  font-size: 14px;
+}
+
+select {
+  box-sizing: border-box;
+  border: 1px solid rgba(4, 69, 167, 0.199);
+  border-radius: 4px;
+  width: 125px;
+  padding-left: 4px;
+  min-height: 38px;
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  display: block;
+}
+
+.female,
+.male {
+  box-sizing: border-box;
+  border: 1px solid rgba(4, 69, 167, 0.199);
+  border-radius: 4px;
+  width: 110px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-size: 14px;
+}
+
+.option {
+  box-sizing: border-box;
+  border: 1px solid rgba(4, 69, 167, 0.199);
+  border-radius: 4px;
+  width: 155px;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.line {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid rgba(4, 69, 167, 0.199);
+  line-height: 0.1em;
+  margin-bottom: 14px;
+}
