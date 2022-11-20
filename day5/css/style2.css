@@ -8,7 +8,7 @@
 img {
   max-width: 100%;
   vertical-align: middle;
-
+  transition: transform 0.5s linear;
   padding-bottom: 15px;
 }
 .movie-list {
@@ -21,6 +21,7 @@ img {
 .movie {
   width: 320px;
   position: relative;
+  transition: transform 0.5s linear;
 }
 
 .movie-btn-play,
@@ -63,11 +64,13 @@ img {
 
 .movie:hover .movie-btn-play {
   display: flex;
+  opacity: 1;
 }
 
 .movie-btn-play {
   /* Ban đầu  ẩn */
-  display: none;
+  opacity: 0;
+  display: flex;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -76,58 +79,71 @@ img {
   justify-content: center;
   font-size: 30px;
   cursor: pointer;
+  transition: opacity 0.5s linear;
+  z-index: 1;
 }
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .nav .container {
-    display: flex;
+  display: flex;
 }
 
 .nav-link,
 .dropdown-button {
-    display: block;
-    padding: 8px 16px;
-    background-color: rgb(71, 24, 61);
-    color: #fff;
-    text-transform: uppercase;
+  opacity: 1;
+  padding: 8px 16px;
+  background-color: rgb(71, 24, 61);
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .nav-link:hover,
 .nav-dropdown:hover .dropdown-button {
-    background-color: rgb(93, 93, 255);
+  background-color: rgb(93, 93, 255);
 }
 
 .nav-dropdown {
-    position: relative;
+  position: relative;
 }
 
 .nav-dropdown:hover .dropdown-menu {
-    display: block;
+  display: block;
 }
 
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ffffff;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-    width: 100%;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
 }
 
 /* Highlight link/menu khi di chuột qua */
 
 .dropdown-item {
-    display: block;
-    padding: 10px 16px;
+  display: block;
+  padding: 10px 16px;
 }
 
 .dropdown-item:hover {
-    background-color: rgb(93, 93, 255);
+  background-color: rgb(93, 93, 255);
+}
+.movie:hover img {
+  transform: scale(1.2);
+}
+
+.movie-thumbnail {
+  overflow: hidden;
+}
+
+.movie-btn-play:hover{
+  opacity: 1;
 }

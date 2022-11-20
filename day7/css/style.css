@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* kích thước box đã tính cả boder */
+  box-sizing: border-box;
+  filter: drop-shadow(5px 5px 10px blue);
+}
+
+.box {
+  height: 500px;
+  transition: background-color 0.2s 0s linear;
+}
+
+/* Custom property 
+- Nên khai báo trên element cấp cao nhất: html, body, :root
+- Cú pháp bắt đầu bằng --
+- SỬ dụng: vả(--custom-property-name
+*/
+:root {
+  --primary-color: blue;
+  --secondary-color: green;
+  --primary-font: "Cascadia Code", mono;
+  --seconder-font: "Arial";
+  --column-gutter: 30px;
+  --row-gutter: 30px;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--primary-font);
+}
+
+/* Transtion thường kết hợp với :hover, :focus
+Transition nên để trên các bộ chọn thông thường.
+Duration thường để 0.2-0.5s
+VD::
+.box => transition 
+.box hover => thay đổi giá trị
+Không phải tất cả thuộc tính css đều áp dụng được transition
+Transition sử dụng với thao tác từ phía người dùng*/
+
+.box:hover {
+  background-color: black;
+}
+/* step */
+@keyframes scale {
+  from {
+    width: 0;
+    height: 0;
+    transform: rotate(0);
+  }
+  50% {
+    width: 300px;
+    height: 300px;
+  }
+  to {
+    width: 0;
+    height: 0;
+    transform: rotate(180deg);
+  }
+}
+
+img {
+  position: fixed;
+  animation: scale 2s linear 0s infinite;
+}
