@@ -20,7 +20,14 @@ a {
   margin: auto;
   margin-top: 40px;
 }
+.head{
+  display: flex;
+  justify-content: space-between;
+}
+.close{
+  padding-top: 10px;
 
+}
 .main-title {
   font-size: 34px;
   font-weight: 600;
