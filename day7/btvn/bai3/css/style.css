@@ -1,0 +1,256 @@
+* {
+  padding: 0 1.3px;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+h1{
+    font-size: 25px;
+    font-weight: 500;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.navigation {
+  display: flex;
+  position: fixed;
+}
+.logo {
+  padding-top: 6px;
+}
+.menu {
+  padding-left: 20px;
+  padding-top: 16px;
+  display: flex;
+  gap: 10px;
+  color: rgb(87, 85, 85);
+}
+.menu1,
+.menu3,
+.menu4 {
+  display: block;
+  border: 1px solid rgba(4, 69, 167, 0.199);
+  border-radius: 3px;
+  width: 60px;
+  font-size: 14px;
+  text-align: center;
+  max-height: 30px;
+  padding-top: 6px;
+}
+.menu2,
+.menu5 {
+  display: block;
+  border: 1px solid rgba(4, 69, 167, 0.199);
+  border-radius: 3px;
+  width: 52px;
+  font-size: 14px;
+  text-align: center;
+  max-height: 30px;
+  padding-top: 6px;
+}
+.search > input[type="text"] {
+  border: none;
+  width: 263px;
+}
+
+.search {
+  display: block;
+  padding-left: 24px;
+  border: 1px solid rgba(4, 69, 167, 0.199);
+  border-radius: 4px;
+  min-height: 30px;
+  padding-left: 10px;
+  font-size: 12px;
+  padding-top: 4px;
+  width: 300px;
+}
+.search-container {
+  padding-top: 16px;
+  padding-left: 24px;
+}
+.term {
+  padding-top: 20px;
+  padding-left: 25px;
+}
+.adjust {
+  padding-top: 22px;
+  padding-left: 25px;
+  scale: 1.6;
+}
+.register {
+  padding-top: 22px;
+  padding-left: 32px;
+  scale: 1.7;
+  color: gray;
+}
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 79px;
+}
+.sponsor {
+  display: flex;
+}
+.main-banner {
+  max-width: 745px;
+}
+.sub-banner {
+  max-width: 240px;
+  max-height: 222px;
+  border: 10px solid cyan;
+  margin-left: 10px;
+}
+.advertise {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-top: 5px;
+  flex-wrap: wrap;
+  gap: 7.3px;
+  margin-left: 4px;
+  margin-bottom: 100px;
+}
+.adv1 {
+  display: flex;
+  background-color: rgba(255, 0, 179, 0.459);
+  padding-top: 4px;
+  align-items: center;
+  width: 242px;
+  height: 68px;
+}
+.adv2 {
+  display: flex;
+  background-color: rgba(255, 238, 0, 0.459);
+  padding-top: 4px;
+  align-items: center;
+  width: 242px;
+  height: 68px;
+}
+.adv3 {
+  display: flex;
+  background-color: rgba(0, 255, 157, 0.459);
+  padding-top: 4px;
+  align-items: center;
+  width: 242px;
+  height: 68px;
+}
+.adv4 {
+  display: flex;
+  background-color: rgba(0, 47, 255, 0.459);
+  padding-top: 4px;
+  align-items: center;
+  width: 242px;
+  height: 68px;
+}
+.description1,
+.description2,
+.description3,
+.description4 {
+  font-size: 14px;
+  width: 160px;
+  color: white;
+}
+
+.movie-list {
+  padding-top: 5px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movie {
+  width: 236px;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.movie-btn-play,
+.movie-content {
+  position: absolute;
+}
+
+.movie-btn-play {
+  top: 10px;
+  left: 10px;
+}
+
+.movie-content {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30px 15px 10px;
+  background-image: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+  color: #eee;
+}
+
+.movie-title {
+  font-size: 16px;
+  margin-bottom: 2px;
+  font-weight: 400;
+}
+
+.movie-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.movie:hover .movie-btn-play {
+  display: flex;
+  opacity: 1;
+}
+
+.movie-btn-play {
+  /* Ban đầu  ẩn */
+  opacity: 0;
+  display: flex;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  transition: opacity 0.5s linear;
+  z-index: 1;
+}
+
+/* Highlight link/menu khi di chuột qua */
+
+.dropdown-item {
+  display: block;
+  padding: 10px 16px;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(93, 93, 255);
+}
+.movie:hover img {
+  transform: scale(1.2);
+}
+
+.movie-thumbnail {
+  overflow: hidden;
+}
+
+.movie-btn-play:hover {
+  opacity: 1;
+}
