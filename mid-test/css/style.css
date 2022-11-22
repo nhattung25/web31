@@ -166,20 +166,21 @@ a {
   position: absolute;
 }
 
-.service1 {
-  width: 236px;
+.service1,
+.service2,
+.service3,
+.service4 {
+  width: 248px;
   position: relative;
   transition: transform 0.5s linear;
 }
 
-.service1:hover.icon1 {
-  display: flex;
-  opacity: 1;
+.service1:hover.icon1+ .icon1 {
+  display: block;
 }
 
 .icon1 {
-  opacity: 0;
-  display: flex;
+  display: none;
   background-color: #ec6875;
   position: relative;
   width: 248px;
