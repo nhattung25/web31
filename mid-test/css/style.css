@@ -172,19 +172,35 @@ a {
 .service4 {
   width: 248px;
   position: relative;
-  transition: transform 0.5s linear;
+  
 }
 
-.service1:hover.icon1+ .icon1 {
-  display: block;
+.service1:hover .icon1 {
+  display: flex;
+  opacity: 1;
+}
+.service2:hover .icon1 {
+  display: flex;
+  opacity: 1;
+}
+.service3:hover .icon1 {
+  display: flex;
+  opacity: 1;
+}
+.service4:hover .icon1 {
+  display: flex;
+  opacity: 1;
 }
 
 .icon1 {
-  display: none;
+  opacity: 0;
+  display: flex;
   background-color: #ec6875;
   position: relative;
   width: 248px;
   height: 300.969px;
   align-items: center;
-  transition: opacity 0.5s linear;
+  padding-left: 98px;
+  transition: opacity 0.3s linear;
+  z-index: 1;
 }
