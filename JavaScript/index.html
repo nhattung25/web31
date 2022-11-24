@@ -163,8 +163,328 @@
       biến đó thuộc kiểu dữ liệu gì. Nhưng đối với JavaScript thì khác, một biến
       có thể thuộc bất kỳ kiểu dữ liệu nào.
     </p>
+    <h3>Các kiểu dữ liệu trong JavaScript</h3>
+    <p>
+      JavaScript có <b>8 </b>kiểu dữ liệu cơ bản, trong đó, có 7 kiểu dữ liệu
+      nguyên thủy (<b
+        >boolean, null, undefined, number, BigInt, string, symbol</b
+      >) và 1 kiểu dữ liệu dạng tham chiếu (<b>object</b>). Trong đó:
+    </p>
+    <ul>
+      <li>
+        <b>Kiểu dữ liệu nguyên thủy</b>: là kiểu dữ liệu mà giá trị không thể
+        thay đổi được. Đây là kiểu dữ liệu ứng với "level thấp nhất" của ngôn
+        ngữ lập trình.
+      </li>
+      <li>
+        <b>Kiểu dữ liệu tham chiếu (object)</b>: là tập hợp của các thuộc tính
+        (key) và giá trị (value). Mà số lượng các key có thể thay đổi, giá trị
+        ứng với key cũng có thể thay đổi. Do đó, giá trị của kiểu dữ liệu tham
+        chiếu có thể thay đổi được.
+      </li>
+    </ul>
+    <h4>Kiểu dữ liệu boolean (kiểu logic)</h4>
+    <p>
+      Boolean là kiểu dữ liệu logic chỉ bao gồm hai giá trị là true (đúng, chính
+      xác) và false (sai, không chính xác). Ví dụ:
+    </p>
+    <img src="./images/12.PNG" alt="" />
+    <h4>Kiểu dữ liệu null</h4>
+    <p>
+      Kiểu dữ liệu <b>null</b> là một kiểu dữ liệu đặc biệt, chỉ bao gồm một giá
+      trị là <b>null</b>. Có thể được hiểu là không có giá trị. Ví dụ:
+    </p>
+    <img src="./images/13.PNG" alt="" />
+    <h4>Kiểu dữ liệu undefined</h4>
+    <p>
+      Cũng tương tự như null, undefined là một kiểu dữ liệu đặc biệt trong
+      JavaScript, chỉ bao gồm một giá trị <b>undefined</b>. Kiểu dữ liệu
+      undefined có nghĩa là chưa xác định hay là <b>giá trị chưa được gán</b>.
+      Ví dụ:
+    </p>
+    <img src="./images/14.PNG" alt="" />
+    <p>
+      Trường hợp biến đã có giá trị rồi, bạn vẫn có thể chủ động gán lại giá trị
+      <b>undefined</b> cho biến. Tuy nhiên, điều này là không nên. Vì như vậy
+      <b> là không đúng ý nghĩa của kiểu dữ liệu undefined </b>.
+    </p>
+    <h4>Kiểu dữ liệu number</h4>
+    <p>
+      Kiểu dữ liệu <b>number</b> là kiểu dữ liệu dạng số (tương tự trong toán
+      học). Number trong JavaScript không có cú pháp gì đặc biệt. Bạn chỉ cần
+      viết số ra. JavaScript có hai loại số là:<b> số nguyên</b> và
+      <b>số thực</b>. Ví dụ:
+    </p>
+    <img src="./images/15.PNG" alt="" />
+    <p>
+      Ngoài những loại số trên, JavaScript còn có 3 số đặc biệt là:<b>
+        Infinity</b
+      >, <b>-Infinity</b> và <b>NaN</b>.
+    </p>
+    <ul>
+      <li>
+        <b>Infinity</b>: là số dương vô cùng. Đây là giá trị đặc biệt và nó lớn
+        hơn bất kỳ số nào khác. Bạn có thể sử dụng giá trị này trực tiếp hoặc
+        thu được nó bằng cách lấy lấy số dương bất kỳ chia cho 0 (toán tử chia
+        trong JavaScript là /).
+      </li>
+      <li>
+        <b>-Infinity</b>: là số âm vô cùng. Đây cũng là giá trị đặc biệt và nó
+        nhỏ hơn bất kỳ số nào khác. Bạn có thể sử dụng giá trị này trực tiếp
+        hoặc thu được nó bằng cách lấy lấy số âm bất kỳ chia cho 0.
+      </li>
+      <li>
+        <b>NaN:</b> là viết tắt của Not a Number, được sử dụng để đại diện cho
+        những trường hợp tính toán sai hoặc kết quả của một phép tính không xác
+        định.
+      </li>
+    </ul>
+    <p>
+      ==> Nhờ những số đặc biệt này mà việc tính toán trong JavaScript sẽ không
+      bị lỗi do chia cho 0 hay các giá trị không phải là số.
+    </p>
+    <h4>Kiểu dữ liệu BigInt</h4>
+    <p>
+      Trong JavaScript, kiểu dữ liệu <b>number</b> không thể biểu diễn một số
+      nguyên lớn hơn (253-1) (bằng 9007199254740991) hay nhỏ hơn -(253-1).
+    </p>
+    <p>
+      Với hầu hết các trường hợp, việc sử dụng kiểu dữ liệu <b>number </b>là quá
+      đủ. Nhưng đôi khi, bạn vẫn cần biểu diễn và tính toán với những số nguyên
+      cực kỳ lớn. Do đó, kiểu dữ liệu <b>BigInt</b> ra đời nhằm giải quyết vấn
+      đề này.
+    </p>
+    <p>
+      Để biểu diễn số nguyên với kiểu <b>BigInt</b>, bạn chỉ cần thêm chữ cái
+      <b>n</b>
+      ở phía sau. Ví dụ:
+    </p>
+    <img src="./images/8.PNG" alt="" />
+    <h4>Kiểu dữ liệu string</h4>
+    <b>String</b> (kiểu chuỗi) là kiểu dữ liệu dùng để biểu diễn chữ, văn bản,
+    đoạn văn bản,... Có ba cách để biểu diễn <b>string</b> trong JavaScript:
+    <ul>
+      <li>Dùng dấu nháy đơn (')</li>
+      <li>Dùng dấu nháy kép (")</li>
+      <li>Dùng dấu "backtick" (`)</li>
+    </ul>
+    Trong đó:
+    <ul>
+      <li>Dấu nháy đơn và dấu nháy kép là hoàn toàn giống nhau.</li>
+      <li>
+        Riêng với dấu "backtick", bạn có thể sử dụng biến, hằng hoặc thậm chí
+        viết một biểu thức trong đó, với cú pháp ${…}, Ví dụ:
+      </li>
+      <img src="./images/9.PNG" alt="" />
+    </ul>
+    <h4>Kiểu dữ liệu symbol</h4>
+    <b>Symbol</b> là một kiểu dữ liệu nguyên thủy dùng để tạo ra các giá trị duy
+    nhất (<b>unique value</b>) và bất biến (<b>immutable</b>).
+    <b>Symbol</b> thường được dùng làm key cho kiểu dữ liệu <b>object</b>.
+    <h4>Kiểu dữ liệu object</h4>
+    <b>Object</b> là kiểu dữ liệu tham chiếu. Về bản chất, object là tập hợp của
+    các key và value. Với key gọi là thuộc tính, còn value là giá trị tương ứng
+    của thuộc tính. Trong đó, kiểu dữ liệu của<b> key </b>có thể là
+    <b>string </b>hoặc <b>symbol</b>. Và <b>value</b> ứng với <b>key</b> có thể
+    là bất kỳ kiểu dữ liệu nào
+    <ul>
+      <li>Object có thể không chứa thuộc tính nào, được gọi là object rỗng.</li>
+      <li>Object phải là một danh từ riêng, không phải danh từ chung.</li>
+    </ul>
+    <p>Cú pháp khai báo như sau:</p>
+    <img src="./images/10.PNG" alt="" />
+    <p>Trong đó:</p>
+    <ul>
+      <li>
+        key1, key2, key3,...: là tên thuộc tính, có kiểu dữ liệu là string hoặc
+        symbol.
+      </li>
+      <li>
+        value1, value2, value3,...: là giá trị tương ứng của các thuộc tính.
+        Value có thể thuộc bất kỳ kiểu dữ liệu nào (kể cả object).
+      </li>
+      <li>Các cặp key-value ngăn cách nhau bởi dấu phẩy ,.</li>
+    </ul>
+    <p>Ví dụ:</p>
+    <img src="./images/11.PNG" alt="" />
     <h2>5. Toán tử Chuyển đổi kiểu dữ liệu</h2>
+    <p>
+      Thông thường, các toán tử và các hàm sẽ tự động chuyển đổi kiểu của giá
+      trị về đúng. Ví dụ như: alert sẽ tự động chuyển bất kỳ kiểu dữ liệu nào về
+      string để hiển thị chúng, các toán tử toán học sẽ tự động chuyển về kiểu
+      number để thực hiện tính toán. Tuy nhiên trong nhiều trường hợp chúng ta
+      muốn chuyển đổi kiểu về kiểu dữ liệu mà chúng ta mong muốn ta có thể sử
+      dụng các cách dưới đây.
+    </p>
+    <h3>5.1.Chuyển đổi kiểu dữ liệu sang String</h3>
+    <h4>Sử dụng String()</h4>
+    <p>
+      Khi chúng ta cần chuyển đổi kiểu của một value sang string chúng ta có thể
+      sử dụng String(). Ví dụ:
+    </p>
+    <img src="./images/16.PNG" alt="" />
+    <h4>Sử dụng toString()</h4>
+    <p>
+      Ngoài việc sử dụng String() thì chúng ta cũng có thể sử dụng toString() để
+      ép kiểu các giá trị về string:
+    </p>
+    <img src="./images/17.PNG" alt="" />
+    <h4>Sử dụng toán tử cộng</h4>
+    <p>
+      Khi sử dụng toán tử, chúng ta đặc biệt phải lưu ý đến toán tử + khi toán
+      hạng có kiểu string. Khi chúng ta sử dụng toán tử + mà một trong các toán
+      hạng có kiểu là string thì Javascript sẽ cố gắng ép kiểu của toán hạng còn
+      lại về kiểu string. Như ví dụ dưới đây: kiểu dữ liệu trả về của y sẽ là
+      String
+    </p>
+    <img src="./images/18.PNG" alt="" />
+    <h3>5.2.Chuyển đổi kiểu dữ liệu sang Number</h3>
+    <h4>Sử dụng Number()</h4>
+    <p>
+      Khi chúng ta muốn chuyển đổi từ một giá trị khác sang giá trị kiểu number,
+      chúng ta có thể sử dụng Number()
+    </p>
+    <img src="./images/19.PNG" alt="" />
+    <h4>parseInt()/parseFloat()</h4>
+    <li>
+      Đối với parseInt(), dữ liệu sẽ được chuyển đổi kiểu của một string về kiểu
+      number nhưng ở dạng interger (số nguyên).parseInt() sẽ trả về các số nằm
+      đầu tiên trong giá trị string đó, nếu chuỗi đó không thể chuyển thành
+      number thì nó sẽ trả về NaN.
+    </li>
+    <img src="./images/20.PNG" alt="" />
+    <li>
+      parseFloat() sẽ chuyển đổi kiểu của một string về kiểu number nhưng ở dạng
+      float (số thực) parseFloat() cũng gần giống như parseInt().
+    </li>
+    <img src="./images/21.PNG" alt="" />
+    <h4>Sử dụng toán tử "+"</h4>
+    <p>
+      Khi chúng ta thêm toán tử "+" vào trước giá trị thì kiểu dữ liệu của giá
+      trị đó sẽ chuyển về giống như khi sử dụng Number()
+    </p>
+    <img src="./images/22.PNG" alt="" />
+    <h3>5.3.Chuyển đổi kiểu dữ liệu sang Boolean</h3>
+    <p>
+      Thông thường, ta sẽ không ép kiểu dữ liệu về Boolean mà thường để
+      JavaScript tự ép kiểu. Ví dụ.
+    </p>
+    <img src="./images/23.PNG" alt="" />
+    <p>
+      Trong trường hợp cần chủ động ép kiểu về Boolean, ta có thể sử dụng
+      Boolean()
+    </p>
+    <img src="./images/24.PNG" alt="" />
+    <li>
+      Các giá trị "0, '', false, null, undefined, NaN" khi ép kiểu về Boolean sẽ
+      trả về false. Các giá trị này được gọi là falsy value trong Javascript
+    </li>
+    <li>Tất cả các giá trị còn lại sẽ trả về true</li>
+    <h3>5.3.Chuyển đổi kiểu dữ liệu sang object</h3>
+    <p>
+      Khi chúng ta ép kiểu một object về string hoặc number thì Javascript sẽ cố
+      gắng tìm và gọi 3 object methods như sau:
+    </p>
+    <ol>
+      <li>
+        Gọi obj[Symbol.toPrimitive](hint) - với key tượng trưng là
+        Symbol.toPrimitive, nếu method này tồn tại.
+      </li>
+      <li>
+        Dựa vào hint , nếu là string thì nó sẽ cố gọi đến method obj.toString()
+        trước và obj.valueOf() sau nếu obj.toString() không tồn tại.
+      </li>
+      <li>
+        Nếu hint là number thì nó sẽ cố gọi đến obj.valueOf() trước và
+        obj.toString() sau.
+      </li>
+    </ol>
+    <h4>Symbol.toPrimitive</h4>
+    <img src="./images/25.PNG" alt="" />Symbol.toPrimitive sẽ cho phép chúng ta
+    quy định giá trị trả về thông qua hint.
+    <p>Kết quả</p>
+    <img src="./images/26.PNG" alt="" />
+    <h4>toString/valueOf</h4>
+    <p>
+      Methods toString và valueOf là 2 method cũ, nếu không tìm thấy
+      Symbol.toPrimitive thì Javascript sẽ cố gắng gọi đến chúng theo thứ tự:
+    </p>
+    <li>toString rồi đến valueOf nếu hint là string</li>
+    <li>valueOf rồi đên toString nếu hint khác string</li>
+    <p>Theo mặc định, đối với một object đơn giản:</p>
+    <li>toString method trả về một string: "[object Object]".</li>
+    <li>valueOf method trả về chính object đó.</li>
+    <img src="./images/27.PNG" alt="" />
+    <p>
+      Vậy chúng ta muốn giá trị trả về là giá trị mà chúng ta mong muốn giống
+      như sử dụng Symbol.toPrimitive thì chúng ta sẽ cần sử dụng kết hợp
+      toString và valueOf như sau
+    </p>
+    <img src="./images/28.PNG" alt="" />
+    <p>Kết quả trả về</p>
+    <img src="./images/26.PNG" alt="" />
     <h2>6. Biến</h2>
+    <h3>6.1. Biến là gì ?</h3>
+    <p>
+      Giống như nhiều ngôn ngữ lập trình khác, JavaScript có các biến. Các biến
+      có thể được coi là các thùng chứa có tên. Bạn có thể đặt dữ liệu vào các
+      vùng chứa này và sau đó tham khảo dữ liệu chỉ bằng cách đặt tên vùng chứa.
+    </p>
+    <h3>6.2. Biến JavaScrip được lưu ở đâu.</h3>
+    <p>
+      Các biến JavaScript được lưu trữ trong bộ nhớ của browser process ( tiến
+      trình trình duyệt) hiểu nôm na 1 cách đơn giản là biến được lưu trong phần
+      Ram mà trình duyệt đang sử dụng.
+    </p>
+    <h3>6.3. Khai báo biến</h3>
+    <p>Để khai báo một biến ta sử dụng từ khóa const, let, var.</p>
+    <p>
+      <b>const</b> được sử dụng để khai báo 1 hằng số, và giá trị của nó không
+      thay đổi trong suốt chương trình.
+    </p>
+    <p>
+      <b>let</b> khai báo biến chỉ có thể truy cập được trong block bao quanh nó
+      được xác định bằng cặp {}.
+    </p>
+    <p>
+      <b>var </b>khai báo biến có thể truy cập ở phạm vi hàm số hoặc bên ngoài
+      hàm số, toàn cục.
+    </p>
+    <h3>6.4. Quy tắc đặt tên biến</h3>
+    <li>
+      Tên biến phải là các chữ không dấu viết hoa hoặc viết thường, các chữ số
+      từ 0-9 và dấu gạch dưới () và kí hiệu $.
+    </li>
+    <li>
+      Tên biến bắt đầu phải là chữ hoặc dấu gạch dưới (_), nếu bắt đầu bằng số
+      là sai.
+    </li>
+    <li>
+      Không thể sử dụng các từ dành riêng (như từ khóa JavaScript) làm tên.
+    </li>
+    <li>Các tên có phân biệt chữ hoa chữ thường</li>
+    <h3>6.5. Kiểu dữ liệu của biến</h3>
+    <p>
+      Khi khai báo biến ta không cần phải khai báo kiểu của biến đó trước khi
+      dùng. Kiểu sẽ được tự động xác định trong lúc chương trình được thực thi.
+      Điều đó cũng có nghĩa là một biến có thể chứa giá trị của các kiểu dữ liệu
+      khác nhau. Ví dụ:
+    </p>
+    <img src="./images/29.PNG" alt="" />
+    <h3>6.6. Phạm vi của biến</h3>
+    <p>
+      Có hai loại phạm vi trong JavaScript. biến cục bộ (local scope) và biến
+      toàn cục (global scope). Biến toàn cục được khai báo ngoài hàm , trong khi
+      đó biến cục bộ được lưu khai báo bên trong một hàm.(Nên với cùng một tên
+      biến, ta có thể khai báo ở những hàm khác nhau).
+    </p>
+    <p>
+      Một biến toàn cục có thể được truy cập từ bên ngoài của hàm cũng như bên
+      trong của hàm nhưng, một biến cục bộ chỉ có thể được truy cập bên trong
+      hàm. Nếu truy cập từ bên ngoài của hàm, bạn sẽ nhận được lỗi 'undefined
+      variable' (biến không xác định).
+    </p>
+    <img src="./images/30.PNG" alt="" />
     <h2>7. Một số bài tập lập trình tính toán đơn giản</h2>
   </body>
 </html>
