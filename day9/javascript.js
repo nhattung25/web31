@@ -60,3 +60,16 @@ sub(5, 4);
 // const currentYear = 2022;
 
 // function calcAge(yearOfBirth) {}
+
+for (let i = 0; i < 10; ++i) {
+  console.log("Xin chào");
+}
+
+try {
+  // Khối lệnh có thể xảy ra lỗi
+} catch (ex) {
+  // Khối lệnh thực thi nếu có lỗi
+} finally {
+  // Khối lệnh này sẽ được thực thi
+  // cho dù có lỗi hay không lỗi
+}

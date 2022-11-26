@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu kiến thức</title>
+    <style>
+      body {
+        margin-left: 20px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>1. Cấu trúc điều khiển là gì?</h2>
+    <p>
+      Trong lập trình, cấu trúc điều khiển hay còn gọi là control structure được
+      sử dụng để điều khiển luồng chạy của chương trình.
+    </p>
+    <p>
+      Java script cung cấp một số cấu trúc điều khiển như: if, switch, vòng lặp
+      for, while, do while…
+    </p>
+    <h2>2. Câu lệnh điều kiện if else</h2>
+
+    <img src="./images/If_else_flow_diagram_C.jpg" alt="" />
+    <p>
+      Câu lệnh if trong Javascript dùng để kiểm tra một mệnh đề nào đó có đúng
+      hay không, nếu đúng thì thực thi những câu lệnh bên trong và ngược lại nếu
+      sai thì nó sẽ bỏ qua những câu lệnh đó. Lệnh else sẽ được thực thi nếu
+      lệnh if không được thực hiện, tức là điều kiện ở condition sẽ có giá trị
+      là FALSE. Như vậy khi dùng lệnh else thì bắt buộc phải có một lệnh if đứng
+      trước nó.
+    </p>
+    <h3>Cấu trúc câu lệnh <i>if else</i></h3>
+    <img src="./images/images.png" alt="" />
+    <p><b>Ví dụ</b></p>
+    <img src="./images/1.png" alt="" />
+    <p>Ta cũng có thể kết hợp nhiều câu lệnh <i>if else</i></p>
+    <img src="./images/2.png" alt="" />
+    <p><b>Ví dụ</b></p>
+    <img src="./images/3.png" alt="" />
+    <h2>3. Câu lệnh điều kiện switch case</h2>
+    <p>
+      Lênh switch case có công dụng giống như lệnh if else đó là đều dùng để rẻ
+      nhánh chương trình, ứng với mỗi nhánh sẽ có một điều kiện cụ thể và điều
+      kiện đó phải sử dụng toán tử so sánh bằng, còn đối với lệnh if else thì
+      bạn có thể truyền vào một mệnh đề bất kì và sử dụng nhiều toán tử khác
+      nhau.
+    </p>
+    <img src="./images/5.png" alt="" />
+    <h3>Cú pháp câu lệnh <i>switch case</i></h3>
+    <img src="./images/4.png" alt="" />
+    <li>
+      Nếu tham số variable có giá trị là value_1 thì những đoạn code nằm bên
+      trong case 1 sẽ được thực hiện, ngược lại nó sẽ nhảy xuống case tiếp theo.
+    </li>
+    <li>
+      Lúc này nếu variable có giá trị là value_2 thì những đoạn code trong case
+      2 sẽ được thực hiện, ngược lại nó kiểm tra tiếp xem còn case nào không.
+    </li>
+    <li>
+      Nhận thấy không còn case nào nữa nên nó sẽ kiểm tra có lệnh default không?
+      Vì có lệnh default nên nó sẽ chạy đoạn code trong lệnh default đó rồi
+      thoát khỏi switch case.
+    </li>
+    <p><b>Ví dụ</b></p>
+    <img src="./images/6.png" alt="" />
+
+    <li>
+      Trường hợp không có default: nếu tham số không khớp với value thì trương
+      chình sẽ không trả về kết quả gì
+    </li>
+    <li>
+      Trường hợp không có break: chương trình sẽ tiếp tục chạy đến cuối chương
+      trình và trả về kết quả của các case khác.
+    </li>
+    <h2>Vòng lặp for</h2>
+    <p>
+      Vòng lặp for là vòng lặp được sử dụng lặp lại một nhiệm vụ nhất định với
+      số lần lặp cho trước.
+    </p>
+    <img src="./images/for.jpeg" alt="" />
+    <h3>Cú pháp vòng lặp <i>for</i></h3>
+    <img src="./images/7.png" alt="" />
+    <p>Trong đó:</p>
+    <li><i>for</i>: Là từ khóa</li>
+    <li><i>khoiTaoBienLap</i>: Là khởi tạo một biến để đếm số lần lặp</li>
+    <li>
+      <i>bieuThucDieuKien</i>: Là biểu thức kiểm tra số lần lặp (giới hạn)
+    </li>
+    <li>
+      <i>capNhatBienLap</i>: Là biểu thức cập nhật biến lặp để đếm số lần lặp
+    </li>
+    <p><b>Ví dụ</b>:</p>
+    <img src="./images/8.png" alt="" />
+    <p>
+      <b>Kết quả</b>: Chương trình sẽ in ra màn hình 10 lần dòng chữ "Xin chào"
+    </p>
+    <h2>Vòng lặp while</h2>
+    <p>
+      Khác với vòng lặp <i>for</i> vòng lặp <i>while</i> sẽ lặp với số lần không
+      biết trước và chỉ dừng lại khi sai với điều kiện cho trước. Trường hợp
+      điều kiện bị sai thì vòng sẽ chạy đến vô hạn
+    </p>
+    <h3>Cú pháp vòng lặp <i>while</i></h3>
+    <img src="./images/9.png" alt="" />
+    <p>
+      Chương trình sẽ chạy các câu lệnh bên trong vòng lặp cho đến khi không còn
+      đúng với điều kiện cho trước
+    </p>
+    <h3>Ví dụ</h3>
+    <img src="./images/10.png" alt="" />
+    <p>
+      <b>Kết quả của chương trình</b>: Chương trình sẽ tăng biến i thêm 1 đơn vị
+      mỗi lần đồng thời in ra màn hình các kết quả
+    </p>
+    <h2>Xử lý lỗi với try catch</h2>
+    <h3>Cú pháp <i>try-catch</i></h3>
+    <img src="./images/11.png" alt="" />
+    <p>Trong đó:</p>
+    <li>try {...}: Bao quanh vùng code khả nghi, có khả năng sinh ra lỗi.</li>
+    <li>
+      catch { ... }: Xử lý thông tin nếu có lỗi. Kiểu như là log file hay là log
+      database hoặc xuất ra màn hình để người lập trình dễ kiểm soát. Hay đơn
+      giản là điều hướng, thông báo lỗi một cách thân thiện hơn cho người dùng.
+    </li>
+    <li>
+      finally { ... }: Đoạn code này luôn luôn được gọi để xử lý các tác vụ còn
+      lại, ví dụ như reset biến hay các tác vụ khác.
+    </li>
+    <li>
+      ex: Là biến đại diện cho lỗi (bạn có thể đặt thế nào tùy thích). Nó sẽ
+      nhận sáu giá trị khác nhau có thể được trả về nếu chương trình bị lỗi.
+    </li>
+  </body>
+</html>
