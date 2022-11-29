@@ -73,3 +73,29 @@ try {
   // Khối lệnh này sẽ được thực thi
   // cho dù có lỗi hay không lỗi
 }
+
+// function test(x) {
+//   if (x > 9) {
+//     console.log("x lon hon 9");
+//   } else {
+//     console.log("x nho hon 9");
+//   }
+// }
+
+function test(x) {
+  switch (x) {
+    case 1: {
+      console.log("Số bạn vừa nhập là 1");
+      break;
+    }
+    case 2: {
+      console.log("Số bạn vừa nhập là 2");
+      break;
+    }
+    default: {
+      console.log("Số bạn vừa nhập toi không biết");
+    }
+  }
+}
+
+test(9);
