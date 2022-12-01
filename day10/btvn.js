@@ -139,18 +139,18 @@ divisor(100);
  *
  * @return {number} Số lần gấp giấy để đạt được độ dày yêu cầu
  */
-// function countFolding(thickness) {
-//   let soLop = 0,
-//     soLangap = 0;
-//   if (thickness % 0.1 == 0) {
-//     soLop = thickness / 0.1;
-//     soLangap = Math.log2(soLop);
-//     console.log(soLangap);
-//   } else {
-//     console.log("Vui lòng nhập độ dày chia hết cho 0.1");
-//   }
-// }
-// countFolding(0.8);
+function countFolding(thickness) {
+  thickness *= 1000;
+  let currentThickness = 0.1,
+    count = 0;
+  while (currentThickness < thickness) {
+    currentThickness *= 2;
+    count++;
+  }
+  console.log(count);
+}
+
+countFolding(1);
 
 /**
  * Tính xem sau bao nhiêu năm nữa thì tuổi cha gấp 2 lần tuổi con
@@ -172,4 +172,150 @@ function countYears(dad, son) {
   console.log("Sau " + count + " năm thì tuổi cha gấp đôi tuổi con");
 }
 
-countYears(31, 10);
+countYears(40, 20);
+
+function countLegs() {
+  let x = 1, // Số chó
+    y = 36 - x; // Số gà
+  while (4 * x + 2 * y != 100) {
+    x++;
+    y--;
+  }
+  console.log(x, y);
+}
+countLegs();
+
+function maxOfThree(a, b, c) {
+  let max = a;
+  if (b > max) {
+    max = b;
+  }
+  if (c > max) {
+    max = c;
+  }
+  console.log(max);
+}
+
+maxOfThree(2, 2, 2);
+
+// Tìm mùa
+
+function reason(month) {
+  switch (month) {
+    case 1:
+    case 2:
+    case 12:
+      console.log("mùa Đông");
+      break;
+
+    case 3:
+    case 4:
+    case 5:
+      console.log("mùa Xuân");
+      break;
+
+    case 6:
+    case 7:
+    case 8:
+      console.log("mùa Hạ");
+      break;
+
+    case 9:
+    case 10:
+    case 11:
+      console.log("mùa Thu");
+      break;
+
+    default:
+      console.log("Bạn nhập sai");
+      break;
+  }
+}
+reason(13);
+
+//Tìm năm nhuận
+function isLeafYear(year) {
+  if (year % 4 == 0 || (year % 400 == 0 && year % 100 != 0)) {
+    return true;
+  } else return false;
+}
+isLeafYear(2000);
+
+Hoặc;
+function isLeafYear(year) {
+  return year % 4 == 0 || (year % 400 == 0 && year % 100 != 0);
+}
+
+// Tìm số ngày trong 1 tháng
+
+function finDayOfMonthS(month, year) {
+  switch (month) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      return 31;
+      break;
+
+    case 9:
+    case 11:
+    case 4:
+    case 6:
+      return 30;
+
+    // case 2:
+    //   if (year % 4 == 0 || (year % 400 == 0 && year % 100 != 0)) return 29;
+    //   else return 28;
+    case 2:
+      return isLeafYear(year) ? 29 : 28;
+
+    default:
+      console.log("Bạn nhập sai");
+      break;
+  }
+}
+finDayOfMonthS(2, 2001);
+
+function calcGrade(point) {}
+
+/**
+ * Tính tiền cước taxi cho khách theo số kilomet đã di chuyển
+ *
+ * - Phí mở cửa cố định là `10.000đ`
+ * - Giá cho `30km` đầu tiên là `11.000đ/km`
+ * - Từ kilomet thứ `31` giá là `9.500đ/km`
+ * - Tổng tiền cước = Phí mở cửa + tổng tiền theo số kilomet đã di chuyển
+ *
+ * @param {number} km Số kilomet đã di chuyển
+ *
+ * @return {number} Số tiền phải trả
+ */
+
+function calcTaxiFee(km) {
+  const OPEN_DOOR = 10000,
+    KM30 = 11000,
+    KM31 = 95000;
+
+  let totalFee;
+  if (km <= 30) {
+    totalFee = OPEN_DOOR + km * KM30;
+    return totalFee;
+  } else {
+    totalFee = OPEN_DOOR + 30 * KM30 + (km - 30) * KM31;
+    return totalFee;
+  }
+}
+calcTaxiFee(31);
+
+// Hàm là gì
+// Có 2 loại hàm: hàm tự dịnh nghĩa và hàm tự tạo
+// Cú pháp: function declaration và function expression
+// Local variable và global variable. Hàm thì có thể truy cập đến giá trị bên ngoài nhưng không thể truy cập vòa cá biến bên trong hàm con.
+//
+//
+
+// Tìm hiểu về object (prototype: hướng đối tượng).
+// Tham khảo bài tập trên mạng

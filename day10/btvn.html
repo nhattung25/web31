@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu về function</title>
+    <style>
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tìm hiểu về function trong JavaScript</h1>
+    <h2>1. Định nghĩa Function</h2>
+    <p>
+      Function (hàm, chức năng), gọi chung là subprogram (chương trình con) có
+      thể được gọi ở bên ngoài hoặc bên trong chính nó. Function bao gồm tập hợp
+      các câu lệnh gọi là function body. Các giá trị có thể truyền đến một hàm,
+      và một hàm có thể trả về giá trị.
+    </p>
+    <h2>2. Cú pháp khai báo Function</h2>
+    <p>
+      Để khai báo hàm, chúng ta dùng từ khóa
+      <span style="color: brown">function</span>, theo sau nó là:
+    </p>
+    <li>Tên hàm</li>
+    <li>
+      Danh sách các tham số truyền vào hàm, được đặt trong ngoặc đơn và cách
+      nhau bởi dấu phẩy.
+    </li>
+    <li>
+      Các câu lệnh của JavaScript để tạo ra một hàm, được đặt trong ngoặc nhọn
+      <span style="color: brown">{...}</span>.
+    </li>
+    <p>Ví dụ cụ thể như bên dưới</p>
+    <img src="./images/1.PNG" alt="" />
+    <h2>3. Khai báo hàm trong biến</h2>
+    <p>
+      Khác với cách khai báo hàm ở trên, ta cũng có thể tạo ra hàm bằng một biểu
+      thức hàm (function expression). Một hàm như vậy có thể nặc danh; nó không
+      cần phải có tên. Ví dụ, hàm sayHello ở trên có thể được khai báo như sau:
+    </p>
+    <img src="./images/2.PNG" alt="" />
+    <p>
+      Tuy ta không cần khai báo tên hàm trong cách này nhưng vẫn nên đặt tên cho
+      hàm. Việc này cho phép hàm có thể chạy chính nó, hoặc có thể sử dụng hệ
+      thống debug để nhận dạng hàm trong stack traces. Ví dụ:
+    </p>
+    <img src="./images/3.PNG" alt="" />
+    <h2>4. Quy định về đặt tên hàm</h2>
+    <p>Tên hàm cần đáp ứng được những yêu cầu sau:</p>
+    <li>Tên hàm phải được bắt đầu bằng chữ cái (a-z,A-Z) hoặc ký tự _.</li>
+    <li>Tên hàm không được bắt đầu bằng số, các ký tự khác ký tự _.</li>
+    <h2>5. Các loại hàm trong JavaScript</h2>
+    <h3>5.1 Hàm cơ bản</h3>
+    <img src="./images/4.PNG" alt="" />
+    <p>
+      Đây là dạng hàm cơ bản nhất trong Javascript, cú pháp có dạng như ví dụ
+      trên. Trong đó:
+    </p>
+    <li>function: là từ khóa khai báo bắt buộc.</li>
+    <li>hamCoban: là tên của hàm</li>
+    <li>Khối câu lệnh nằm trong cặp {...}</li>
+    <h3>5.2 Hàm có tham số truyền vào</h3>
+    <p>
+      Đây là một dạng hàm rất hay được sử dụng, cú pháp về cơ bản cũng giống với
+      loại hàm cơ bản, tuy nhiên có thêm tham số truyền vào. Ví dụ như sau:
+    </p>
+    <img src="./images/5.PNG" alt="" />
+    <p>Trong đó:</p>
+    <li>funName là tên của hàm các bạn muốn đặt.</li>
+    <li>
+      param_1,...,pram_n là các tham số mà các bạn muốn truyền vào hàm(không
+      giới hạn số lượng).
+    </li>
+    <h3>5.3 Hàm có tham số mặc định</h3>
+    <p>
+      Cũng giống với loại hàm có tham số truyền vào nhưng tham số đã được đặt
+      mặc định.
+    </p>
+    <img src="./images/6.PNG" alt="" />
+    <h2>5.4 Hàm có và không trả về giá trị</h2>
+    <p>
+      Trong javascript có hai loại hàm,đó là hàm có giá trị trả về và hàm không
+      có giá trị trả về.
+    </p>
+    <li>
+      Đối với hàm có giá trị trả về thì phải sử dụng từ khóa
+      <span style="color: brown"><i>return</i></span>
+    </li>
+    <li>
+      Và ngược lại đối với hàm không có giá trị trả về thì không có từ khóa
+      <span style="color: brown"><i>return</i></span>
+    </li>
+    <p>Ví dụ:</p>
+    <img src="./images/7.PNG" alt="" />
+    <h2>6. Cách gọi hàm</h2>
+    <p>
+      Trong JavaScript, để hàm (function) được thực thi, ta cần gọi hàm. Ví dụ
+      như sau:
+    </p>
+    <img src="./images/8.PNG" alt="" />
+    <p>
+      Trong ví dụ trên, đơn giản, ta chỉ cần gọi tên hàm kèm cặp ngoặc
+      <span style="color: brown">()</span>. Khi đó các câu lệnh ta đã tạo ra
+      trong hàm sẽ được thực thi. Ở đây là in ra màn hình dòng chữ "<span
+        style="color: brown"
+        >Đây là hàm cơ bản</span
+      >"
+    </p>
+    <h2>7. Phạm vi của hàm</h2>
+    <p>
+      Các biến được định nghĩa bên trong một hàm không thể được truy cập từ nơi
+      nào khác bên ngoài hàm, bởi vì biến đó được định nghĩa chỉ trong phạm vi
+      của hàm. Tuy nhiên, một hàm có thể truy cập đến mọi biến và mọi hàm khác
+      trong cùng phạm vi mà nó được định nghĩa.
+    </p>
+    <p>
+      Nói cách khác, một hàm được định nghĩa trong phạm vi global có thể truy
+      cập tới tất cả các biến đã được định nghĩa trong phạm vi global. Một hàm
+      được định nghĩa bên trong một hàm khác có thể truy cập đến tất cả biến
+      được định nghĩa bên trong hàm cha của nó, và bất cứ biến nào khác mà hàm
+      cha của nó có quyền truy cập đến. Các bạn có thể tham khảo ví dụ dưới đây:
+    </p>
+    <img src="./images/9.PNG" alt="" />
+    <h2>8. Tham số của function</h2>
+    <h3>8.1 Tham số mặc định</h3>
+    <p>
+      Trong JavaScript, các tham số của function được mặc định là undefined. Tuy
+      nhiên, trong một số trường hợp nó có thể hữu ích để thiết lập một giá trị
+      mặc định khác. Đây chính xác là điều mà default parameters sẽ làm.
+    </p>
+  </body>
+</html>
