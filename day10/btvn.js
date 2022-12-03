@@ -319,3 +319,7 @@ calcTaxiFee(31);
 
 // Tìm hiểu về object (prototype: hướng đối tượng).
 // Tham khảo bài tập trên mạng
+
+var arr = new Array(1, 2, 4, 5, 9, 6);
+arr[2] = 111;
+console.log(arr);

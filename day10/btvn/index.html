@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu về mảng</title>
+    <style>
+      body {
+        padding-left: 10px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>1. Tìm hiểu về Array</h1>
+    <h2>2. Array là gì</h2>
+    <p>
+      <b>Array</b>, hay được gọi là mảng, là kiểu dữ liệu mà giá trị của nó chứa
+      nhiều giá trị khác. Mỗi giá trị của mảng được gọi là <b>element</b> (phần
+      tử). Ví dụ:
+    </p>
+    <img src="./1.png" alt="" />
+    <h2>3. Thuộc tính length</h2>
+    <p>
+      <b>length</b>: Là thuộc tính đưa ra độ dài của mảng. Nếu bạn dùng một số
+      nguyên âm, số thực hoặc một chuỗi làm chỉ mục thì độ dài của mảng cũng là
+      một số nguyên dương cao nhất. Ví dụ:
+    </p>
+    <img src="./2.png" alt="" />
+    <h2>4. Cú pháp khai báo</h2>
+    <p>Trong JavaScript. ta có thể khai báo mảng bằng 2 cách.</p>
+    <h3>4.1 Khai báo bằng dấu []</h3>
+    <img src="./3.png" alt="" />
+    <p>Trong đó:</p>
+    <li><span style="color: brown">arr</span> là tên biến mảng.</li>
+    <li>
+      <span style="color: brown">value1,...valuen</span> là các giá trị của mảng
+      mà các bạn muốn tạo.
+    </li>
+    <p>Ví dụ: Khai báo mảng gồm các phần tử số</p>
+    <img src="./4.png" alt="" />
+    <h3>4.2 Khai báo bằng new Array()</h3>
+    <img src="./5.png" alt="" />
+    <p>Trong đó:</p>
+    <li><b>arr</b> là tên biến mảng.</li>
+    <li>
+      <b>value1,...valuen</b> là các giá trị của mảng mà các bạn muốn tạo.
+    </li>
+    <p>Ví dụ: Khai báo mảng gồm các phần tử số</p>
+    <img src="./6.png" alt="" />
+    <h2>5. Các cú pháp cơ bản</h2>
+    <h3>5.1 Truy xuất mảng</h3>
+    <p>
+      Để có thể lấy ra giá trị của một thành phần trong mảng thì chúng ta sử
+      dụng cú pháp sau:
+    </p>
+    <img src="./7.png" alt="" />
+    <p>Trong đó:</p>
+    <li><b>arr</b> là tên biến mảng</li>
+    <li><b>index </b>là vị trí của mảng(bắt đầu từ 0)</li>
+    <p>Ví dụ</p>
+    <img src="./8.png" alt="" />
+    <h3>5.2 Thêm giá trị</h3>
+    <p>Để thêm phần tử vào mảng ta dùng hàm <b>push()</b>. Ví dụ:</p>
+    <img src="./9.png" alt="" />
+    <p>
+      Ta có thể thêm 1 hoặc nhiều phần tử vào mảng bằng hàm <b>push()</b>. Phần
+      tử được thêm vào sẽ được đặt vào cuối mảng.
+    </p>
+    <p>
+      Ngoài ra ta cũng có thể sử dụng hàm <b>splice()</b> để thêm phần tử vào
+      một ví trí bất kỳ trong mảng theo mong muốn. Cú pháp như sau:
+    </p>
+    <img src="./10.png" alt="" />
+    <p>Trong đó:</p>
+    <li><b>arr</b> là tên biến mảng các bạn muốn thêm vào.</li>
+    <li>
+      <b>index</b> là vị trí mà các bạn muốn thêm phần tử vào (bắt đầu từ 0).
+    </li>
+    <li>
+      <b>howmany</b> là số phần tử sẽ xóa tính tự vị trí thêm mảng, để 0 nếu
+      không muốn xóa phần tử nào.
+    </li>
+    <li><b>item1,...itemX</b> là giá trị của các phần tử muốn thêm vào.</li>
+    <p>Ví dụ</p>
+    <img src="./11.png" alt="" />
+
+    <h3>5.3 Sửa giá trị</h3>
+    <p>
+      Để sửa hay thay đổi giá trị của một phần tử trong mảng ta có thể sử dụng
+      cú pháp sau:
+    </p>
+    <img src="./14.png" alt="" />
+    <p>Trong đó:</p>
+    <li><b>arr</b>: là tên mảng</li>
+    <li>
+      <b>[2]</b>: là vị trí phần tử cần thay thế trong mảng. Vị trí của phần tử
+      cần đặt trong cặp ngoặc []
+    </li>
+    <li>Giá trị cần thay thế sẽ đặt sau dấu <b>=</b></li>
+    <h3>5.4 Xóa giá trị</h3>
+    <p>
+      Để xóa một hay nhiều phần tử trong mảng ở vị trí bất kỳ. Ta cũng có thể sử
+      dụng hàm <b>splice()</b>. Cú pháp như sau:
+    </p>
+    <img src="./12.png" alt="" />
+    <p>Trong đó:</p>
+    <li><b>start</b>: vị trí phần tử bắt đầu bị loại bỏ khỏi mảng.</li>
+    <li><b>n</b>: là số lượng phần tử bị loại bỏ.</li>
+    <p>Ví dụ:</p>
+    <img src="./13.png" alt="" />
+    <h2>6. Các phương thức cơ bản làm việc với mảng</h2>
+  </body>
+</html>
