@@ -323,3 +323,14 @@ calcTaxiFee(31);
 var arr = new Array(1, 2, 4, 5, 9, 6);
 arr[2] = 111;
 console.log(arr);
+
+//Một đối tượng đã có tên ob, thêm cho nó setter, getter có tên namepro
+Object.defineProperty(ob, 'namepro', {
+    set: function(x) {
+        //code setter ở đây
+       },
+    get: function() {
+            //code getter ở đây
+       }
+
+});

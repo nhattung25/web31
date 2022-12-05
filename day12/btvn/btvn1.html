@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu về <object data="" type=""></object></title>
+  </head>
+  <body>
+    <h1>Tìm hiểu về object</h1>
+    <h2>1. Object là gì</h2>
+    <p>
+      Objects trong JavaScript, objects dùng để mô tả những đối tượng thực tế
+      trong đời thực. Object là một thực thể độc lập, với thuộc tính và kiểu.
+    </p>
+    <p>
+      Đối tượng trong Javascript là một tập hợp các cặp khóa - giá trị, tương tự
+      như bản đồ, từ điển, hay hash-table trong ngôn ngữ lập trình khác.
+    </p>
+    <li>Đối tượng là một tập hợp các thuộc tính</li>
+    <li>Thuộc tính là một cặp khóa - giá trị chứa tên và giá trị</li>
+    <li>
+      Tên thuộc tính là một giá trị duy nhất có thể bị ép buộc vào một chuỗi và
+      trỏ đến một giá trị
+    </li>
+    <li>
+      Giá trị thuộc tính có thể là bất kỳ giá trị nào, bao gồm các đối tượng
+      khác hoặc các hàm, được liên kết với tên/khóa
+    </li>
+    <h2>2. Cú pháp khởi tạo object</h2>
+    <p>Có 3 cách để khai báo đối tượng trong Javascript:</p>
+    <li>Sử dụng cặp ngoặc {}</li>
+    <li>Sử dụng từ khóa new Object()</li>
+    <li>Sử dụng phương thức static</li>
+    <p>Ví dụ:</p>
+    <img src="./1.png" alt="" />
+    <h2>3. Thiết đặt thuộc tính cho object</h2>
+    <p>
+      Bây giờ chúng ta đã có 1 đối tượng trống, chúng ta cần thêm các thuộc tính
+      vào nó bằng cách sử dụng các trình truy cập (accessors).
+    </p>
+    <p>
+      Tên thuộc tính hợp lệ bao gồm chữ cái, số, kí tự,.. có thể ép thành một
+      chuỗi, nhưng không được sử dụng các từ dành riêng như function, var,
+      return, .v.v. Ví dụ:
+    </p>
+    <img src="./2.png" alt="" />
+    <h2>4. Phương thức trong object</h2>
+    <p>
+      Một đối tượng ngoài các thuộc tính ra nó còn chứa hàm gọi là phương thức.
+      Một phương thức là một hàm liên kết với một object, hoặc, có thể nói
+      phương thức là một thuộc tính của object có giá trị là một hàm. Phương
+      thức được định nghĩa giống như cách định nghĩa hàm, ngoài trừ việc chúng
+      phải được gán như là thuộc tính của một object.
+    </p>
+    <p>
+      Thường các phương thức được định nghĩa qua một hàm khởi tạo đối tượng. Ví
+      dụ:
+    </p>
+    <img src="./3.png" alt="" />
+    <h2>5. Setter và getter</h2>
+    <p>
+      Một thuộc tính của của đối tượng còn thiết lập nó là hàm setter hoặc
+      getter, nếu là setter nó chỉ được gọi qua toán tử gán giá trị cho nó, nếu
+      là getter thì chỉ được gọi khi truy cập lấy giá trị thuộc tính.
+    </p>
+    <p>
+      Hàm setter định nghĩa bằng cách cho thêm set, hàm getter định nghĩa bằng
+      cách cho thêm get. Ví dụ:
+    </p>
+    <img src="./4.png" alt="" />
+    <p>
+      Trong trường hợp muốn định nghĩa setter / getter trong hàm tạo đối tượng
+      thì bạn cần định nghĩa theo nguyên tắc thêm một thuộc tính vào đối tượng
+      đã có với lệnh Object.defineProperty
+    </p>
+    <img src="./5.png" alt="" />
+    <h2>6. Sử dụng <i>this</i> trong object</h2>
+    <p>
+      <i>this</i> là 1 toán tử đặc biệt, trỏ đến đối tượng đang thực hiện hành
+      vi. Giúp truy cập chính xác đến đối tượng. Cách xác định this: this là đối
+      tượng trước dấu chấm. Ví dụ:
+    </p>
+    <img src="./6.png" alt="" />
+    <h2>7. Contractor trong object</h2>
+    <h2></h2>
+  </body>
+</html>
