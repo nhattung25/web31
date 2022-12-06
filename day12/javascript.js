@@ -108,15 +108,15 @@ function Cat(name, breed, age) {
 const cat1 = new Cat("meo", "muop", 1);
 const cat2 = new Cat("meomeo", "persian", 2);
 
-
 //BTVN: Tìm hiểu về Array.
 
-let dog={
-     name: "",
-age:  12,
-bread: ,
- gender:
- color: 
- legs: 
-  favoriteFood: 
+class Polygon {
+  constructor() {
+    this.name = "Polygon";
+  }
 }
+
+const poly1 = new Polygon();
+
+console.log(poly1.name);
+// expected output: "Polygon"
