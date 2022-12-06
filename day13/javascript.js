@@ -1,5 +1,3 @@
-// function counter(value = 0) {}
-
 let counter = {
   value: 0,
   up() {
@@ -11,7 +9,7 @@ let counter = {
     return this;
   },
   get() {
-    console.log(this.value);
+    alert("Value: " + this.value);
     return this;
   },
   reset() {
