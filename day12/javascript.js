@@ -110,13 +110,3 @@ const cat2 = new Cat("meomeo", "persian", 2);
 
 //BTVN: Tìm hiểu về Array.
 
-class Polygon {
-  constructor() {
-    this.name = "Polygon";
-  }
-}
-
-const poly1 = new Polygon();
-
-console.log(poly1.name);
-// expected output: "Polygon"
