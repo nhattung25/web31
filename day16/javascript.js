@@ -68,4 +68,45 @@ nhất (giữ nguyên số chữ số ban đầu, bao gồm cả số 0)
  * @example
  * sortNumber(5307510); // 1003557
  */
+// kiểm tra xem phần tử đầu có phải là số 0 không rồi dịch index về sau
 function sortNumber(n) {}
+
+/**
+ * Đếm số lần xuất hiện của mỗi phần tử trong mảng, nếu là chuỗi thì
+không phân biệt chữ hoa chữ thường
+ *
+ * @param {any[]} arr - Mảng chứa giá trị bất kỳ
+ *
+ * @return {Record<string, number>} object chứa kết quả, với key là giá
+trị trong mảng và value là số lần xuất hiện trong mảng
+ *
+ * @example
+ * let result = countElement([1, true, 1, 1, true]);
+ * console.log(result); // {1: 3, true: 2}
+ *
+ * @example
+ * let result = countElement(['Ba', 'Béo', 'Ba']);
+ * console.log(result); // {ba: 2, béo: 1}
+ */
+/**
+ *
+ */
+
+function countElement(arr) {
+  let result = {};
+  for (let value of arr) {
+    let key = String(value).toLowerCase();
+    if (key in result) {
+      result[key] += 1;
+    } else {
+      result[key] = 1;
+    }
+  }
+  console.log(result);
+  return result;
+}
+countElement([1, 2, 2, 3, 1, 1, 4]);
+
+
+// Làm bài tập: Sách bài tập kỹ thuật lập trình
+// luyện trên leetcode và hackerrank (50 bài leetCode)
