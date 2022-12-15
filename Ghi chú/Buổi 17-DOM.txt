@@ -1,0 +1,8 @@
+Searching
+- API cũ: getElementBy.. 
+	+ được gọi trên document, tốc độ chậm do gọi trên toàn trang, ưu điểm kết quả tự động được cập nhật	
+	+ get thì có nhiều hàm khác nhau, mỗi hàm sử dụng 1 cú pháp khác.
+
+- API mới: querySelector, closet...
+	+ có thể gọi được ở bất kỳ node nào, không tự động cập nhật kết quả
+	+ có thể sử dụng chung cho tất cả các loại tìm kiếm (tìm kiếm theo bộ chọn css)
