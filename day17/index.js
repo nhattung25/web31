@@ -14,7 +14,7 @@ for (let i = 0; i < rows.length; i++) {
  * Tổng kết
  * Môi trường chạy mã và thực thi mã trong trình duyệt cung cấp cho mình một số API(các đối tượng BOM,DOM) để làm việc/thao tác với cửa sổ trình duyệt, với nội dung hiển thị
  * Cấu trúc phân cấp đối tượng:
- * + Node(tất cả mọi thứ đều là node
+ * + Node(tất cả mọi thứ đều là node)
  * + document cũng là một node
  * + Element: chỉ bao gồm các Node là thẻ HTML (h1,h2..)
  * + Mỗi thẻ HTML có 1 Interface riêng, mô tả các thuộc tính và phương thức riêng của nó VD HTMLTableElement, HTMLImageElement..
