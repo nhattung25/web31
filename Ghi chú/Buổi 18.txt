@@ -1,0 +1,8 @@
+GÁN SỰ KIỆN CHO TRÌNH XỬ LÝ
+Thông qua thuộc tính HTML on (VD:Nếu gán hàm handle trên button thì cần gọi hàm)
+Gán thuộc tính thông qua DOM on (Gán thông qua JS không cần gọi hàm)
+Cách 3(hay dùng): dùng addEventListener(không dùng () gọi hàm trong addEventListener) để gán, dùng remove để xóa
+
+
+
+** nhấn bàn phím, thanh cuộn, nhấn chuột.

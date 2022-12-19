@@ -27,7 +27,7 @@ const createTodoItem = function (todos) {
   return li;
 };
 
-const creatToDoList = function (todos) {
+const createToDoList = function (todos) {
   const ul = document.createElement("ul");
   for (let i = 0; i < todos.length; i++) {
     const todo = todos[i];
@@ -37,4 +37,4 @@ const creatToDoList = function (todos) {
   return ul;
 };
 
-div.append(creatToDoList(todos));
+div.append(createToDoList(todos));
