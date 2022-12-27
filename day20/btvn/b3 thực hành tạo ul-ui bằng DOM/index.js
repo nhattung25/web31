@@ -35,9 +35,48 @@ list.insertBefore(liNew, li5);
 
 // Thêm 1 nút “add” + 1 ô input để nhập text. Mỗi khi bấm nút thêm 1 thẻ <li> có nội dung là nội dung trong ô input vào cuối danh sách
 
+let addText = document.createElement("input"); //Tạo ô nhập liệu
+addText.placeholder = "Enter item here";
+document.body.appendChild(addText);
+
+let addBtn = document.createElement("button"); //Tạo nút add
+addBtn.innerText = "Add";
+document.body.appendChild(addBtn);
+
+addBtn.addEventListener("click", function () {
+  let input = addText.value;
+  let liInput = document.createElement("li");
+  if (input == "") {
+    alert("Please input the item's name");
+    return;
+  } else liInput.innerText = input;
+  list.appendChild(liInput);
+  addText.value = ""; //Set nội dung của ô nhập liệu bằng rỗng để tự xóa sau khi add li
+});
+
 // Thêm 1 nút “remove”. Chức năng để xóa thẻ <li> cuối cùng của danh sách
 
+let removeBtn = document.createElement("button");
+removeBtn.innerText = "Remove last Item";
+document.body.appendChild(removeBtn);
+removeBtn.addEventListener("click", function () {
+  let lastLi = document.querySelector("#list li:last-Child");
+  console.log(lastLi);
+  if (lastLi) {
+    list.removeChild(lastLi); // Xóa lastLi
+  }
+  return;
+});
 // Thêm 1 nút “Hide” trên đầu của danh sách <ul>.
+let hideBtn = document.createElement("button");
+hideBtn.innerText = "Hide";
+document.body.insertBefore(hideBtn, list);
+hideBtn.addEventListener("click", function () {
+  list.classList.toggle("hide");
+  if (list.classList.contains("hide")) {
+    hideBtn.innerText = "Show";
+  } else hideBtn.innerText = "Hide";
+});
 
 // Khi bấm vào “Hide” thì <ul> sẽ ẩn. Đồng thời label của nút “Hide” => “Show”
 

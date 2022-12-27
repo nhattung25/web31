@@ -121,32 +121,86 @@
 
 // console.log(searchInsert([1, 3, 5, 6], 9));
 
-var plusOne = function (digits) {
-  let arr1 = [];
-  let nums = digits.join("");
-  let arr = (BigInt(nums) + 1n).toString().split("");
-  for (let i = 0; i < arr.length; i++) {
-    let b = +arr[i];
-    arr1.push(b);
-  }
-  return arr1;
-};
-console.log(plusOne([9, 9]));
+// var plusOne = function (digits) {
+//   let arr1 = [];
+//   let nums = digits.join("");
+//   let arr = (BigInt(nums) + 1n).toString().split("");
+//   for (let i = 0; i < arr.length; i++) {
+//     let b = +arr[i];
+//     arr1.push(b);
+//   }
+//   return arr1;
+// };
+// console.log(plusOne([9, 9]));
 
-var deleteDuplicates = function (head) {
-  let result = {};
-  let sum = 0;
-  let arr1 = [];
+// var deleteDuplicates = function (head) {
+//   let result = {};
+//   let sum = 0;
+//   let arr1 = [];
 
-  for (let value of head) {
-    if (value in result) {
-      result[value] += 1;
-    } else {
-      result[value] = 1;
-      sum += 1;
-      arr1.push(value);
+//   for (let value of head) {
+//     if (value in result) {
+//       result[value] += 1;
+//     } else {
+//       result[value] = 1;
+//       sum += 1;
+//       arr1.push(value);
+//     }
+//   }
+//   return arr1;
+// };
+// console.log(deleteDuplicates([1, 1, 2, 3, 3]));
+
+/*------------136. Single Number (Done)----------*/
+// var singleNumber = function (nums) {
+//   let obj = {};
+//   for (let value of nums) {
+//     if (value in obj) {
+//       obj[value] += 1;
+//     } else obj[value] = 1;
+//   }
+//   for (const nums of Object.entries(obj)) {
+//     const [key, value] = nums;
+//     if (value == 1) return +key;
+//   }
+// };
+// console.log(singleNumber([1]));
+
+/*-----------121. Best Time to Buy and Sell Stock (Done)-------- */
+// var maxProfit = function (prices) {
+//   var buy = prices[0] || 0;
+//   //console.log(buy);
+//   var profit = 0;
+//   for (var i = 1; i < prices.length; i++) {
+//     if (prices[i] < buy) {
+//       buy = prices[i];
+//     }
+//     profit = Math.max(profit, prices[i] - buy);
+//   }
+//   return profit;
+// };
+// console.log(maxProfit([7, 1, 5, 3, 6, 4]));
+
+/*-----------202. Happy Number------------ */
+var isHappy = function (n) {
+  function numSquareSum(n) {
+    var squareSum = 0;
+    while (n != 0) {
+      squareSum += (n % 10) * (n % 10);
+      n = parseInt(n / 10);
     }
+    return squareSum;
   }
-  return arr1;
+
+  let st = new Set();
+  while (1) {
+    n = numSquareSum(n);
+    if (n == 1) return true;
+    if (st.has(n)) return false;
+    st.add(n);
+    console.log(st);
+  }
+  
 };
-console.log(deleteDuplicates([1, 1, 2, 3, 3]));
+
+console.log(isHappy(2));
