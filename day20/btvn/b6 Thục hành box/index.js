@@ -19,7 +19,10 @@ count.innerText = allBox.length;
 let box = document.querySelector(".box");
 console.log(box);
 boxes.addEventListener("click", function () {
-  boxes.removeChild(box);
+  allBox.forEach((box) => {
+    box.style.backgroundColor = "black";
+  });
+  //boxes.removeChild(box);
   count.innerText = allBox.length - 1;
 });
 
