@@ -5,7 +5,7 @@ let boxes = document.querySelector(".boxes");
 
 for (let i = 0; i < 5; i++) {
   let box = document.createElement("div");
-  box.className = "box";
+  box.className = "boxes box";
   boxes.appendChild(box);
   box.style.backgroundColor = colors[i];
 }
@@ -19,8 +19,20 @@ count.innerText = allBox.length;
 let box = document.querySelector(".box");
 console.log(box);
 boxes.addEventListener("click", function () {
-  boxes.removeChild(box);
+  allBox.forEach((box) => {
+    boxes.removeChild(box);
+  });
   count.innerText = allBox.length - 1;
 });
 
 // Khi click vào nút “more box” thì số lượng box tăng lên 5 (tương ứng với 5 màu trong mảng colors), đồng thời số lượng total box cũng tăng lên 5
+let btn = document.querySelector("#btn");
+btn.addEventListener("click", function () {
+  for (let i = 0; i < 5; i++) {
+    let box = document.createElement("div");
+    box.className = "box";
+    boxes.appendChild(box);
+    box.style.backgroundColor = colors[i];
+    count.innerText = allBox.length + 5;
+  }
+});
