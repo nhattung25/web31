@@ -1,0 +1,8 @@
+#Bất đồng bộ(Asynchronous):
+Ưu điểm: tối ưu hóa được thời gian chạy của chương trình
+Nhược điểm: chương trình rất khó đọc/hiểu/kiểm soát
+#Các cách triên khai bất đồng bộ trong JS
+-Sử dụng hàm Callback.
+-ES6 sử dụng Promise: thông thường không cần viết Promise
+-ES7 sử dụng Async/Await(cải tiến của Promise)
+Mục đích của bất đồng bộ: đồng bộ giữ liệu với phía Server, gọi API

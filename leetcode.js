@@ -182,25 +182,44 @@
 // console.log(maxProfit([7, 1, 5, 3, 6, 4]));
 
 /*-----------202. Happy Number------------ */
-var isHappy = function (n) {
-  function numSquareSum(n) {
-    var squareSum = 0;
-    while (n != 0) {
-      squareSum += (n % 10) * (n % 10);
-      n = parseInt(n / 10);
-    }
-    return squareSum;
-  }
+// var isHappy = function (n) {
+//   function numSquareSum(n) {
+//     var squareSum = 0;
+//     while (n != 0) {
+//       squareSum += (n % 10) * (n % 10);
+//       n = parseInt(n / 10);
+//     }
+//     return squareSum;
+//   }
 
-  let st = new Set();
-  while (1) {
-    n = numSquareSum(n);
-    if (n == 1) return true;
-    if (st.has(n)) return false;
-    st.add(n);
-    console.log(st);
+//   let st = new Set();
+//   while (1) {
+//     n = numSquareSum(n);
+//     if (n == 1) return true;
+//     if (st.has(n)) return false;
+//     st.add(n);
+//     console.log(st);
+//   }
+
+// };
+
+// console.log(isHappy(2));
+
+var isSubsequence = function (s, t) {
+  let sArr = s.split("");
+  let tArr = t.split("");
+  let indexArr = [];
+  if (sArr == "") return true;
+  else {
+    for (let i = 0; i < sArr.length; i++) {
+      indexArr.push(tArr.indexOf(sArr[i]));
+    }
+    for (let j = 0; j < indexArr.length; j++) {
+      if (indexArr[j + 1] < indexArr[j]) {
+        return false;
+      } else return true;
+    }
   }
-  
 };
 
-console.log(isHappy(2));
+console.log(isSubsequence("b", "c"));

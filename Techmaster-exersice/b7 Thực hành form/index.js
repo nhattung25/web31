@@ -13,10 +13,12 @@ confirmLable.innerText = "Confirm passwword";
 regis[2].prepend(confirmLable);
 
 // Kiểm tra xem password và confirm pass có trùng nhau hay không
+
 let passInput = document.querySelector("#password");
 let passConfirm = document.querySelector("#confirmPassword");
 let userInput = document.querySelector("#username");
 let flag = false;
+
 passInput.addEventListener("keyup", function () {
   let passValue = this.value;
   passConfirm.addEventListener("keyup", function () {
@@ -32,10 +34,13 @@ let submitBtn = document.querySelector("#btn");
 submitBtn.setAttribute("disabled", true);
 
 // Sau khi nhập đầy đủ thì ‘Đăng ký’ được enable.
-userInput.addEventListener("keyup", function () {
-  let userInputTex = this.value;
-  if (userInputTex != "" && flag) submitBtn.removeAttribute("disabled");
-});
+function inputUserName() {
+  userInput.addEventListener("keyup", function () {
+    let userInputTex = this.value;
+    if (userInputTex != "" && flag) submitBtn.removeAttribute("disabled");
+  });
+}
+inputUserName();
 
 // Khi user nhập đủ thông tin hợp lệ và bấm vào nút submit thì tạo 1 hộp thoại thông báo đăng ký thành công
 submitBtn.addEventListener("click", function () {
