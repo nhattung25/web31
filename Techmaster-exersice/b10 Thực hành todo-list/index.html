@@ -17,15 +17,15 @@
 
       <div class="status">
         <div class="todo-status">
-          <input type="radio" id="all" />
+          <input type="radio" id="all" onclick="check()" class="radio" />
           <label for="all">All</label>
         </div>
         <div class="todo-status">
-          <input type="radio" id="not-yet" />
+          <input type="radio" id="pending" onclick="check()" class="radio" />
           <label for="not-yet">Chưa hoàn thành</label>
         </div>
         <div class="todo-status">
-          <input type="radio" id="done" />
+          <input type="radio" id="done" onclick="check()" class="radio" />
           <label for="done">Hoàn thành</label>
         </div>
       </div>
