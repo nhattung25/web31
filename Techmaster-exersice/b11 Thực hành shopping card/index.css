@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  align-items: center;
+  background-image: linear-gradient(to bottom right, #67b26f, #4ca2cd);
+  color: rgb(100, 99, 99);
+  font-weight: 700;
+  height: 3000px;
+}
+h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+  font-family: "Bungee Inline", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: 100%;
+  padding-bottom: 15px;
+  border-radius: 4px;
+}
+button {
+  border: none;
+}
+.nav {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 20px;
+}
+.container {
+  margin: auto;
+  text-align: center;
+}
+.title {
+  padding-top: 30px;
+}
+.menu {
+  display: flex;
+  gap: 10px;
+}
+
+.item-list {
+  padding-top: 20px;
+  width: 1200px;
+  margin: auto;
+}
+
+.item {
+  width: 1200px;
+  height: 250px;
+  display: flex;
+  background-color: white;
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.616);
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 120px;
+}
+
+.item-info {
+  padding-top: 30px;
+  text-align: left;
+}
+.description {
+  padding-top: 20px;
+}
+.total {
+  display: flex;
+  padding-top: 20px;
+  width: 1200px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  text-align: left;
+}
+.sub,
+.tax,
+.total-cost {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  padding-bottom: 30px;
+  font-size: 120%;
+}
+.total-cost {
+  font-weight: 900;
+}
+
+input {
+  height: 55px;
+  width: 400px;
+  border: solid #16cc9b;
+  outline: none;
+}
+.input-code {
+  display: flex;
+  padding-top: 20px;
+}
+.enter-btn button {
+  height: 55px;
+  background-color: #16cc9b;
+  width: 90px;
+  font-size: larger;
+  color: white;
+  font-weight: 900;
+}
+
+.info {
+  display: flex;
+}
+
+.description,
+.price {
+  padding-top: 35px;
+}
+
+.thumbnail {
+  width: 200px;
+  height: 200px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.item-name,
+.price {
+  font-size: 21px;
+  font-weight: 700;
+}
