@@ -33,7 +33,6 @@ function renderUI(arr) {
   todo_list.innerHTML = "";
   if (arr.length === 0) {
     todo_list.innerHTML = "<p>Không có công việc</p>";
-    
   }
   for (let i = 0; i < arr.length; i++) {
     let t = arr[i];

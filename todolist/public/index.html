@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành todo-list</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title"><h1>Todo List</h1></div>
+      <div class="todo-input">
+        <input type="text" placeholder="  Nhập công việc" id="input-tex" />
+        <button class="todo-input input">Thêm</button>
+      </div>
+
+      <div class="status">
+        <div class="todo-status">
+          <input type="radio" id="all" onclick="check()" class="radio" />
+          <label for="all">All</label>
+        </div>
+        <div class="todo-status">
+          <input type="radio" id="pending" onclick="check()" class="radio" />
+          <label for="not-yet">Chưa hoàn thành</label>
+        </div>
+        <div class="todo-status">
+          <input type="radio" id="done" onclick="check()" class="radio" />
+          <label for="done">Hoàn thành</label>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="todo-list">
+          <div class="option">
+            <button class="btn btn-update">
+              <img
+                src="https://buihien0109.github.io/HTML5-Games/DOM-project/todo/img/pencil.svg"
+                alt="icon"
+              />
+            </button>
+            <button class="btn btn-delete">
+              <img
+                src="https://buihien0109.github.io/HTML5-Games/DOM-project/todo/img/remove.svg"
+                alt="icon"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </body>
+</html>
