@@ -13,7 +13,7 @@ let products = [
     price: 250000,
     image:
       "https://thumbs.dreamstime.com/b/cute-tender-feminine-caucasian-woman-orange-hoodie-show-peace-signs-over-eyes-tilt-head-looking-left-happy-smiling-broadly-174846258.jpg",
-    count: 1,
+    count: 2,
   },
   {
     id: randomId(),
@@ -30,9 +30,14 @@ let products = [
 let item = document.querySelectorAll(".item");
 let item_list = document.querySelector(".item-list");
 let discount = document.querySelector(".discount");
-
+let itemCount = document.querySelector(".item-count");
+let delBtn = document.querySelector(".delBtn");
 function renderItem(arr) {
+  //Đếm item trong giỏ
+  itemCount.innerHTML = `${countItem(arr)} item in the bag`;
   item_list.innerHTML = "";
+
+  //Render item trong data base
   if (arr.length === 0) {
     item_list.innerHTML = "Không có sản phẩm trong giỏ hàng";
     discount.style.display = "none";
@@ -49,9 +54,16 @@ function renderItem(arr) {
               <div class="price">${t.price} VND</div>
             </div>
           </div>
-          <div class="quantity">${t.count}</div>
-          <div class="del-btn">
-            <button class="delBtn">
+          <div class="quantity">
+  <input
+    type="number"
+    class="quantity"
+    step="1"
+    value="${t.count}"
+  />
+</div>
+          <div class="del-btn" >
+            <button class="delBtn" onClick="delItem(${p.id})">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -70,3 +82,24 @@ function renderItem(arr) {
   }
 }
 window.onload = renderItem(products);
+
+//Function đếm item
+function countItem(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    p = arr[i];
+    total += p.count;
+    console.log(p.count);
+  }
+  return total;
+}
+
+//Function xóa item trong giỏ hàng
+function delItem(id) {
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].id == id) {
+      products.splice(i, 1);
+    }
+  }
+  renderItem(products);
+}
