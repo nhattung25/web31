@@ -25,6 +25,7 @@ try {
   const data = await respone.json();
 
   document.querySelector(".post").innerHTML = data.map(toPostCard).join("");
+  console.log(data.map(toPostCard).join(""));
 } catch (error) {
   console.log("không thể lấy dữ liệu");
 }
