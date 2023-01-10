@@ -7,7 +7,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   align-items: center;
   background-image: linear-gradient(to bottom right, #67b26f, #4ca2cd);
-  color: rgb(100, 99, 99);
+  color: rgb(87, 85, 85);
   font-weight: 700;
   height: 3000px;
 }
@@ -63,6 +63,8 @@ button {
   align-items: center;
   justify-content: space-between;
   padding-right: 120px;
+  border: 3px solid #5cc2a7b7;
+  border-radius: 6px;
 }
 
 .item-info {
@@ -132,4 +134,56 @@ input {
 .price {
   font-size: 21px;
   font-weight: 700;
+}
+
+.delBtn {
+  opacity: 0;
+  transform: scale(2);
+  background-color: white;
+}
+.item:hover .delBtn {
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+.item:hover,
+.info {
+  transition: all 0.2s ease-in;
+  /* background-color: rgba(253, 255, 254, 0.582); */
+  transform: scale(1.008);
+}
+
+.item:hover .info {
+  transform: scale(1.01);
+  transition: all 0.5s ease-in;
+}
+
+input {
+  transition: all 0.25s linear;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.quantity > input {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: calc(50% - 53px);
+  background: #fff;
+  border: 2px solid #ddd;
+  text-align: center;
+  font: 600 1.5rem Helvetica, Arial, sans-serif;
+}
+
+.quantity > input:hover,
+.quantity > input:focus {
+  border-color: #f58551;
+  transform: scale(1.3);
 }
