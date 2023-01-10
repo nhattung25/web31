@@ -1,14 +1,11 @@
 async function getBreedList() {
   let res = await axios.get("https://dog.ceo/api/breeds/list/all");
-
-  renderBreed(res.data.message);
   renderSub(res.data.message);
-}
-async function getImage() {
+  renderBreed(res.data.message);
   let img = await axios.get("https://dog.ceo/api/breed/hound/afghan/images");
-
   showImg(img.data.message);
 }
+
 
 let list = document.querySelector("#list");
 let btn = document.querySelector("#btn");
@@ -39,7 +36,7 @@ function renderSub(breeds) {
 }
 
 let li = document.getElementsByClassName("item");
-let anh = document.querySelector(".anh");
+let anh = document.querySelector(".img");
 
 function randomImg() {
   return Math.floor(Math.random() * 50);
@@ -47,10 +44,10 @@ function randomImg() {
 function showImg(img) {
   Array.from(li).forEach((item) => {
     item.addEventListener("click", function () {
-      console.log(img[1]);
       anh.innerHTML = `<img class="anh" src="${img[randomImg()]}" alt="">`;
     });
   });
+  anh.innerHTML = "";
 }
 getBreedList();
-getImage();
+
