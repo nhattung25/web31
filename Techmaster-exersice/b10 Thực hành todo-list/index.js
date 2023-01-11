@@ -123,21 +123,21 @@ function updateItem(id) {
   idUpdate = id;
   isUpdate = true;
 }
-let radio = document.getElementsByClassName("radio");
-function check() {
-  if (allOpt.checked) {
-    doneOtp.checked = false;
-    pendingOtp.checked = false;
-    renderUI(todos);
-  }
-  if (pendingOtp.checked) {
-    console.log("bbbb");
-    allOpt.checked = false;
-    doneOtp.checked = false;
-  }
-  if (doneOtp.checked) {
-    console.log("aaaa");
-    allOpt.checked = false;
-    pendingOtp.checked = false;
-  }
-}
+// let radio = document.getElementsByClassName("radio");
+// function check() {
+//   if (allOpt.checked) {
+//     doneOtp.checked = false;
+//     pendingOtp.checked = false;
+//     renderUI(todos);
+//   }
+//   if (pendingOtp.checked) {
+//     console.log("bbbb");
+//     allOpt.checked = false;
+//     doneOtp.checked = false;
+//   }
+//   if (doneOtp.checked) {
+//     console.log("aaaa");
+//     allOpt.checked = false;
+//     pendingOtp.checked = false;
+//   }
+// }

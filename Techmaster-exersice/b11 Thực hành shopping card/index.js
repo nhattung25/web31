@@ -32,6 +32,7 @@ let item_list = document.querySelector(".item-list");
 let discount = document.querySelector(".discount");
 let itemCount = document.querySelector(".item-count");
 let delBtn = document.querySelector(".delBtn");
+
 function renderItem(arr) {
   //Đếm item trong giỏ
   itemCount.innerHTML = `${countItem(arr)} item in the bag`;
@@ -44,14 +45,14 @@ function renderItem(arr) {
     return;
   }
   for (let i = 0; i < arr.length; i++) {
-    let t = arr[i];
+    let p = arr[i];
     item_list.innerHTML += `<div class="item">
           <div class="info">
-            <div class="thumbnail"><img src="${t.image}" alt="" /></div>
+            <div class="thumbnail"><img src="${p.image}" alt="" /></div>
             <div class="item-info">
-              <div class="item-name">${t.name}</h2></div>
-              <div class="description">${t.description}</div>
-              <div class="price">${t.price} VND</div>
+              <div class="item-name">${p.name}</h2></div>
+              <div class="description">${p.description}</div>
+              <div class="price">${p.price} VND</div>
             </div>
           </div>
           <div class="quantity">
@@ -59,7 +60,7 @@ function renderItem(arr) {
     type="number"
     class="quantity"
     step="1"
-    value="${t.count}"
+    value="${p.count}"
   />
 </div>
           <div class="del-btn" >
@@ -89,7 +90,6 @@ function countItem(arr) {
   for (let i = 0; i < arr.length; i++) {
     p = arr[i];
     total += p.count;
-    console.log(p.count);
   }
   return total;
 }
